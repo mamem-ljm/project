@@ -76,7 +76,7 @@
 		
 	<header data-is-mobile="false" data-state="fixedPosition"
 		data-site-width="980" data-header-top="0"
-		style="margin-top: 50px; top: 0; left: 0; margin-left: 0; width: 100%; min-width: 980px; bottom:; right:; z-index: 50"
+		style="top: 0; left: 0; margin-left: 0; width: 100%; min-width: 980px; bottom:; right:; z-index: 50"
 		class="style-jnej9x48" id="SITE_HEADER">
 		<div style="left: 0; width: 100%"
 			id="SITE_HEADERscreenWidthBackground"

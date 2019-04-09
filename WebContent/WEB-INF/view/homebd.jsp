@@ -4,7 +4,7 @@
 <div id="masterPage" class="mesh-layout" data-mesh-layout="grid">
 	<header data-is-mobile="false" data-state="fixedPosition"
 		data-site-width="980" data-header-top="0"
-		style="position: fixed; margin-top: 50px; top: 0; left: 0; margin-left: 0; width: 100%; min-width: 980px; bottom:; right:; z-index: 50"
+		style="position: fixed; top: 0; left: 0; margin-left: 0; width: 100%; min-width: 980px; bottom:; right:; z-index: 50"
 		class="style-jnej9x48" id="SITE_HEADER">
 		<div style="left: 0; width: 100%"
 			id="SITE_HEADERscreenWidthBackground"
@@ -554,7 +554,7 @@
 			</div>
 		</div>
 	</header>
-	<div id="SITE_HEADER-placeholder" style="height: 144px; display: block"></div>
+	<div id="SITE_HEADER-placeholder" style="height: 93px; display: block"></div>
 	<footer
 		style="bottom: auto; left: 0; margin-left: 0; width: 100%; min-width: 980px; top:; right:; position:"
 		class="style-jnitutu5_footer style-jnitutu5" data-site-width="980"

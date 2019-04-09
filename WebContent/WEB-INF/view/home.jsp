@@ -5,7 +5,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Insert title here</title>
+<title>Medical Clinic</title>
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
@@ -83,6 +83,12 @@
 </head>
 
 <body>
+
+	<div style="background-color: white; height: 50px; position: fixed">
+	
+	</div>
+
+
 	<script type="text/javascript">
 		var htmlClassList = document.documentElement.classList;
 
@@ -95,9 +101,9 @@
 			<link href="/css/theme_fonts.css" rel="stylesheet" />
 			<link href="/css/theme_colors.css" rel="stylesheet" />
 		</div>
-		
+
 		<div data-aid="stylesContainer">
-			<%@include file="link.jsp" %>		
+			<%@include file="link.jsp"%>
 			<style type="text/css" data-styleid="AutoWidthAnchorSkin">
 .AutoWidthAnchorSkin {
 	visibility: hidden;
@@ -105,15 +111,19 @@
 }
 </style>
 
-			<link href="/css/style-jt5p2m4e.css" rel="stylesheet" data-styleid="style-jt5p2m4e" />
-			
-			<link href="/css/style-jt5p2mh1.css" rel="stylesheet" data-styleid="style-jt5p2mh1" />
-			
-			<link href="/css/style-jt5p580p.css" rel="stylesheet" data-styleid="style-jt5p580p" />
-			
-			<link href="/css/style-jjwfa6ut.css" rel="stylesheet" data-styleid="style-jjwfa6ut" />
+			<link href="/css/style-jt5p2m4e.css" rel="stylesheet"
+				data-styleid="style-jt5p2m4e" />
+
+			<link href="/css/style-jt5p2mh1.css" rel="stylesheet"
+				data-styleid="style-jt5p2mh1" />
+
+			<link href="/css/style-jt5p580p.css" rel="stylesheet"
+				data-styleid="style-jt5p580p" />
+
+			<link href="/css/style-jjwfa6ut.css" rel="stylesheet"
+				data-styleid="style-jjwfa6ut" />
 		</div>
-		
+
 		<div class="noop visual-focus-on" style="posion: relative">
 			<div id="FONTS_CONTAINER">
 				<link
@@ -167,10 +177,6 @@
 				<div id="masterPage" class="mesh-layout" data-mesh-layout="grid">
 					<%@include file="homebd.jsp"%>
 				</div>
-			</div>
-
-			<div id="WIX_ADS" class="wix-ads-2 visible desktop">
-				<%-- <%@include file="WIX_ADS.jsp"%> --%>
 			</div>
 
 			<script id="partiallyVisibleBeat">
