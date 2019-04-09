@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.style-jjpggu4r1[data-state~="squared"], .style-jjpggu4r1[data-state~="squared"] .style-jjpggu4r1mapContainer
+	{
+	border-radius: 0;
+}
+
+.style-jjpggu4r1mapContainer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

@@ -1,0 +1,44 @@
+@charset "UTF-8"; 
+
+.pc1screenWidthBackground {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.pc1[data-state~="fixedPosition"] {
+	position: fixed !important;
+	left: auto !important;
+	z-index: 50;
+}
+
+.pc1[data-state~="fixedPosition"].pc1_footer {
+	top: auto;
+	bottom: 0;
+}
+
+.pc1bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.pc1inlineContent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.pc1centeredContent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

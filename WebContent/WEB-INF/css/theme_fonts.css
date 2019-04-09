@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.font_0 {
+	font: normal normal normal 40px/1.4em poppins-semibold, poppins,
+		sans-serif;
+	color: #0063A0;
+}
+
+.font_1 {
+	font: normal normal normal 16px/1.4em din-next-w01-light,
+		din-next-w02-light, din-next-w10-light, sans-serif;
+	color: #7A7979;
+}
+
+.font_2 {
+	font: normal normal normal 26px/1.4em poppins-semibold, poppins,
+		sans-serif;
+	color: #0063A0;
+}
+
+.font_3 {
+	font: normal normal normal 23px/1.4em poppins-semibold, poppins,
+		sans-serif;
+	color: #0063A0;
+}
+
+.font_4 {
+	font: normal normal normal 60px/1.4em poppins-semibold, poppins,
+		sans-serif;
+	color: #0063A0;
+}
+
+.font_5 {
+	font: normal normal bold 20px/1.4em questrial, sans-serif;
+	color: #0063A0;
+}
+
+.font_6 {
+	font: normal normal normal 19px/1.4em poppins-semibold, poppins,
+		sans-serif;
+	color: #0063A0;
+}
+
+.font_7 {
+	font: normal normal normal 21px/1.4em questrial, sans-serif;
+	color: #0063A0;
+}
+
+.font_8 {
+	font: normal normal normal 20px/1.4em questrial, sans-serif;
+	color: #0063A0;
+}
+
+.font_9 {
+	font: normal normal normal 15px/1.4em questrial, sans-serif;
+	color: #0063A0;
+}
+
+.font_10 {
+	font: normal normal normal 12px/1.4em din-next-w01-light,
+		din-next-w02-light, din-next-w10-light, sans-serif;
+	color: #7A7979;
+}

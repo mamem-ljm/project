@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.mc1:not ([data-mobile-responsive]
+	) .mc1inlineContent, .mc1:not ([data-mobile-responsive] ) .mc1container
+	{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

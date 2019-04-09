@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+.style-jqccasb4itemsContainer
+	{
+	width: calc(100% - 0px);
+	height: calc(100% - 0px);
+	white-space: nowrap;
+	display: inline-block;
+	overflow: visible;
+	position: relative;
+}
+
+.style-jqccasb4moreContainer {
+	overflow: visible;
+	display: inherit;
+	white-space: nowrap;
+	width: auto;
+	background-color: rgba(7, 77, 120, 1);
+	border-radius: 0;
+}
+
+.style-jqccasb4dropWrapper {
+	z-index: 99999;
+	display: block;
+	opacity: 1;
+	visibility: hidden;
+	position: absolute;
+	margin-top: 7px;
+}
+
+.style-jqccasb4dropWrapper[data-dropMode="dropUp"] {
+	margin-top: 0;
+	margin-bottom: 7px;
+}
+
+.style-jqccasb4repeaterButton {
+	height: 100%;
+	position: relative;
+	box-sizing: border-box;
+	display: inline-block;
+	cursor: pointer;
+	font: normal normal normal 15px/1.4em questrial, sans-serif;
+}
+
+.style-jqccasb4repeaterButton[data-state~="header"] a,
+	.style-jqccasb4repeaterButton[data-state~="header"] div {
+	cursor: default !important;
+}
+
+.style-jqccasb4repeaterButtonlinkElement {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.style-jqccasb4repeaterButton_gapper {
+	padding: 0 5px;
+}
+
+.style-jqccasb4repeaterButtonlabel {
+	display: inline-block;
+	padding: 0 10px;
+	color: #FFFFFF;
+	transition: color 0.4s ease 0s;
+}
+
+.style-jqccasb4repeaterButton[data-state~="drop"] {
+	width: 100%;
+	display: block;
+}
+
+.style-jqccasb4repeaterButton[data-state~="drop"] .style-jqccasb4repeaterButtonlabel
+	{
+	padding: 0 .5em;
+}
+
+.style-jqccasb4repeaterButton[data-state~="over"] .style-jqccasb4repeaterButtonlabel,
+	.style-jqccasb4repeaterButton[data-preview~="hover"] .style-jqccasb4repeaterButtonlabel
+	{
+	color: #01C5A2;
+	transition: color 0.4s ease 0s;
+}
+
+.style-jqccasb4repeaterButton[data-state~="selected"] .style-jqccasb4repeaterButtonlabel,
+	.style-jqccasb4repeaterButton[data-preview~="active"] .style-jqccasb4repeaterButtonlabel
+	{
+	color: #01C5A2;
+	transition: color 0.4s ease 0s;
+}

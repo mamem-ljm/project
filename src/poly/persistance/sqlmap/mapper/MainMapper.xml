@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- JAVA와 연결할 Mapper 파일 설정 -->
+<mapper namespace="poly.persistance.mapper.MainMapper">
+
+<!-- getDATA -->
+<select id="getData" resultType="PerDTO">
+	SELECT
+		 S_HASH AS hash
+	FROM 
+		sheet_list
+	ORDER BY
+		s_seq DESC LIMIT 1
+</select>
+
+
+<!-- insert sheet -->
+<insert id="SendData" parameterType="PerDTO">
+	INSERT INTO
+		sheet_list
+	(
+		S_CONTENT,
+		S_HASH,
+		S_NAME,
+		S_DNAME,
+		S_LICENSE,
+		S_DATE,
+		S_PNUMBER
+	)
+	VALUES(
+		#{content},
+		#{hash},
+		#{name},
+		#{dname},
+		#{license},
+		#{date},
+		#{pnumber}
+	)
+</insert>
+
+<select id="getallsheet" resultType="PerDTO">
+	SELECT
+		S_CONTENT AS content,
+		S_HASH AS hash,
+		S_NAME AS name,
+		S_DNAME AS dname,
+		S_LICENSE AS license,
+		S_DATE AS date,
+		S_PNUMBER AS pnumber
+	FROM
+		sheet_list
+</select>
+
+<!-- <insert id="SendUser" parameterType="UDTO">
+INSERT INTO
+		user_list
+	(
+		U_NAME,
+		u_ADDR,
+		U_HP,
+		U_GENDER,
+		U_PNUMBER
+	)
+	
+	VALUES(
+		#{name},
+		#{addr},
+		#{hp},
+		#{gender},
+		#{pnumber}
+	)
+</insert> -->
+</mapper>
