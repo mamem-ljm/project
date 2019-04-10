@@ -10,7 +10,15 @@ public class PerDTO {
 	private String license;
 	private String dname;
 	private String hash;
+	private String pres;
 	
+	
+	public String getPres() {
+		return pres;
+	}
+	public void setPres(String pres) {
+		this.pres = pres;
+	}
 	public String getS_SEQ() {
 		return S_SEQ;
 	}

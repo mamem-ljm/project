@@ -1,37 +1,23 @@
-<%@page import="poly.dto.PerDTO"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%
-	
-	
-	%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>환자 등록</title>
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<%
-ArrayList<PerDTO> allsheet = new ArrayList<PerDTO>();
-%>
-
-
-
+<title>환자목록</title>
 </head>
 <body>
+	<!-- 합쳐지고 최소화된 최신 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 	<link href="/css/theme_fonts.css" rel="stylesheet" />
 	<link href="/css/theme_colors.css" rel="stylesheet" />
-	
+
 	<link rel="stylesheet" type="text/css" href="/css/viewer_min.css" />
 
 	<link href="/css/pc1.css" rel="stylesheet" type="text/css"
@@ -81,7 +67,7 @@ ArrayList<PerDTO> allsheet = new ArrayList<PerDTO>();
 
 	<link href="/css/style-jjpggu4r1.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jjpggu4r1" />
-		
+
 	<header data-is-mobile="false" data-state="fixedPosition"
 		data-site-width="980" data-header-top="0"
 		style="top: 0; left: 0; margin-left: 0; width: 100%; min-width: 980px; bottom:; right:; z-index: 50"
@@ -530,52 +516,48 @@ ArrayList<PerDTO> allsheet = new ArrayList<PerDTO>();
 			</div>
 		</div>
 	</header>
+	
+	
+	
+	
+	<div class="container" style="margin-top: 10%;width: 50%;">
 
-
-	<div class="container" style="margin-top: 10%;width: 40%;">
-		<form action="SendUser.do" method="post">
 			<table class="table">
 
-				<caption>환자 등록</caption>
+				<caption>환자 목록</caption>
+				
+				<tr>
+					<td style="width:10%;">번호</td>
+					<td style="width:15%;">환자명</td>
+					<td style="width:40%;">진단명</td>
+					<td style="width:15%;">담당의사</td>
+					<td style="width:20%;">날짜</td>
+				</tr>
+				<!-- 게시물용 환자 목록 가져오기 -->
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
 
-				<tbody>
-
-					<tr>
-						<th>이름</th>
-						<td><input type="text" placeholder="성명" name="name"
-							class="form-control" /></td>
-					</tr>
-					<tr>
-						<th>주소</th>
-						<td><input type="text" placeholder="주소" name="addr"
-							class="form-control"></td>
-					</tr>
-					<tr>
-						<th>핸드폰번호</th>
-						<td><input type="text" placeholder="핸드폰번호" name="hp"
-							class="form-control" /></td>
-					</tr>
-					<tr>
-						<th>주민등록번호</th>
-						<td><input type="text" placeholder="주민등록번호" name="pnumber"
-							class="form-control" /></td>
-					</tr>
-					<tr>
-						<th>성별</th>
-						<td><input type="radio" name="gender" id="optionsRadios1"
-							value="1" />남 <input type="radio" name="gender"
-							id="optionsRadios2" value="0" />여</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-							<input type="submit" value="등록" onclick="sendData()" class="pull-right btn btn-primary" />
-							<input type="button" value="리셋" class="pull-left pull-right btn btn-primary" />
-						</td>
-					</tr>
-				</tbody>
 			</table>
-		</form>
+			
+			<a class="btn btn-default pull-right">작성</a>
+			
+		<div class="text-center">
+		
+			<ul class="pagination">
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+			</ul>
+		</div>
 	</div>
+
 
 </body>
 </html>

@@ -18,4 +18,6 @@ public interface MainMapper {
 
 	void SendUser(UDTO udto);
 
+	public int getSheetTotalCount() throws Exception;
+
 }

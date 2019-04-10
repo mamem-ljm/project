@@ -462,7 +462,7 @@
 																	style="width: 15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																	role="button" tabindex="0" aria-haspopup="false"
 																	data-listposition="right"
-																	href="WritePage.do"
+																	href="Userlist.do"
 																	target="_self" id="comp-ja27wet64linkElement"
 																	class="style-jqccasb4repeaterButtonlinkElement"><div
 																			class="style-jqccasb4repeaterButton_gapper">

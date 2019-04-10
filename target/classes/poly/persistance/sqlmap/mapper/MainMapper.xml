@@ -25,7 +25,7 @@
 		S_DNAME,
 		S_LICENSE,
 		S_DATE,
-		S_PNUMBER
+		S_PRES
 	)
 	VALUES(
 		#{content},
@@ -34,21 +34,24 @@
 		#{dname},
 		#{license},
 		#{date},
-		#{pnumber}
+		#{pres}
 	)
 </insert>
 
 <select id="getallsheet" resultType="PerDTO">
 	SELECT
-		S_CONTENT AS content,
-		S_HASH AS hash,
-		S_NAME AS name,
+		S_SEQ AS s_seq,
+		S_NAME AS s_name,
+		S_PRES AS s_pres,
 		S_DNAME AS dname,
-		S_LICENSE AS license,
-		S_DATE AS date,
-		S_PNUMBER AS pnumber
+		S_DATE AS date
 	FROM
 		sheet_list
+</select>
+
+<select id="getSheetTotalCount" resultType="java.lang.Integer">
+	SELECT COUNT(0) 
+	FROM sheet_list
 </select>
 
 <!-- <insert id="SendUser" parameterType="UDTO">

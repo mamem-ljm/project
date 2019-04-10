@@ -12,9 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import poly.dto.PagingDTO;
 import poly.dto.PerDTO;
 import poly.dto.UDTO;
 import poly.service.IMainService;
+import poly.util.CmmUtil;
 import poly.util.IsChainValid;
 
 @Controller
@@ -67,6 +69,33 @@ public class MainController {
 		/*t2.schedule(m_task, 0, 10000);*/
 
 		return "/home";
+	}
+	
+	@RequestMapping(value="Userlist")
+	public String Userlist(HttpServletRequest req)throws Exception{
+		
+		log.info("Welcome Userlist");
+		
+		ArrayList<PerDTO> allsheet = new ArrayList<PerDTO>();
+		
+		req.setAttribute("allsheet",allsheet);
+		
+		int totalCount = mainService.getSheetTotalCount();
+		int pageNum = 1;
+		int pageCount = 10;
+		
+		pageCount = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageCount"),"10"));
+		pageNum = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageNum"),"1"));
+		
+		PagingDTO paging = new PagingDTO();
+		
+		paging.setTotalCount(totalCount);
+		paging.setPageNum(pageNum);
+		paging.setPageCount(pageCount);
+		
+		allsheet = mainService.getallsheet(paging);
+		
+		return "/main/Userlist";
 	}
 
 	//진단서 작성
@@ -121,21 +150,23 @@ public class MainController {
 		log.info("welcome senddata");
 
 		String name = req.getParameter("name");
-		String pnumber = req.getParameter("pnumber");
+		String pres = req.getParameter("Pres");
 		String content = req.getParameter("content");
 		String date = req.getParameter("date");
 		String license = req.getParameter("license");
 		String dname = req.getParameter("dname");
+		
 
 		PerDTO pdto = new PerDTO();
 
 		pdto.setName(name);
-		pdto.setPnumber(pnumber);
+		pdto.setPres(pres);
 		pdto.setContent(content);
 		pdto.setDate(date);
 		pdto.setLicense(license);
 		pdto.setDname(dname);
-
+		
+		
 		mainService.SendData(pdto);
 
 		return "redirect:/home.do";

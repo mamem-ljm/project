@@ -35,7 +35,9 @@ public class MainService implements IMainService{
 		pdto.setHash(block.getHash());
 		
 		mainMapper.SendData(pdto);
+		
 	}
+	
 
 	@Override
 	public ArrayList<PerDTO> getallsheet(){
@@ -48,6 +50,13 @@ public class MainService implements IMainService{
 	public void SendUser(UDTO udto) throws Exception {
 		// TODO Auto-generated method stub
 		
+	}
+
+	//시트 리스트 토탈 카운트 가져오기
+	@Override
+	public int getSheetTotalCount() throws Exception {
+		// TODO Auto-generated method stub
+		return mainMapper.getSheetTotalCount();
 	}
 	
 	
