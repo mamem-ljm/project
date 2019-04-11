@@ -16,19 +16,6 @@
 <link rel="apple-touch-icon" href="https://www.wix.com/favicon.ico"
 	type="image/x-icon" />
 
-<!-- <meta http-equiv="X-Wix-Meta-Site-Id"
-	content="83ca291c-e3f1-4264-b2cf-97129d9f21e1" />
-<meta http-equiv="X-Wix-Application-Instance-Id"
-	content="e1703d8c-8d90-4281-951a-68958109dd5e" /> -->
-
-
-<!-- <meta http-equiv="X-Wix-Published-Version" content="7" />
-
-
-
-<meta http-equiv="etag" content="2b59e3717f27064a19b3457c94367dff" />
- -->
-
 <meta name="format-detection" content="telephone=no" />
 
 
@@ -40,27 +27,27 @@
 	content="width=980, user-scalable=yes" />
 
 
-<script src="/js/script01.js" type="text/javascript">
+<script src="/assets/js/script01.js" type="text/javascript">
 	
 </script>
 
-<script src="/js/script02.js" type="text/javascript">
+<script src="/assets/js/script02.js" type="text/javascript">
 	
 </script>
 
-<script src="/js/script03.js" type="text/javascript">
+<script src="/assets/js/script03.js" type="text/javascript">
 	
 </script>
 
-<script src="/js/script04.js" type="text/javascript">
+<script src="/assets/js/script04.js" type="text/javascript">
 	
 </script>
 
-<script src="/js/script05.js" type="text/javascript">
+<script src="/assets/js/script05.js" type="text/javascript">
 	
 </script>
 
-<script src="/js/script06.js" type="text/javascript" id="sentry">
+<script src="/assets/js/script06.js" type="text/javascript" id="sentry">
 	
 </script>
 
@@ -79,13 +66,62 @@
 
 <meta property="og:type" content="Website" />
 
+<link rel="stylesheet" type="text/css" href="/assets/css/viewer_min.css" />
+
+<link href="/assets/css/pc1.css" rel="stylesheet" type="text/css"
+	data-styleid="pc1" />
+
+<link href="/assets/css/siteBackground.css" rel="stylesheet" type="text/css"
+	data-styleid="siteBackground" />
+
+<link href="/assets/css/style-jnitutu5.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jnitutu5" />
+
+<link href="/assets/css/style-jnej9x48.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jnej9x48" />
+
+<link href="/assets/css/p1.css" rel="stylesheet" type="text/css"
+	data-styleid="p1" />
+
+<link href="/assets/css/style-jqccasb4.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jqccasb4" />
+
+<link href="/assets/css/style-jkjozsak.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jkjozsak" />
+
+<link href="/assets/css/lb1.css" rel="stylesheet" type="text/css"
+	data-styleid="lb1" />
+
+<link href="/assets/css/style-jncrii45.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jncrii45" />
+
+<link href="/assets/css/style-jezowobv.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jezowobv" />
+
+<link href="/assets/css/txtNew.css" rel="stylesheet" type="text/css"
+	data-styleid="txtNew" />
+
+<link href="/assets/css/style-jibfh6j53.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jibfh6j53" />
+
+<link href="/assets/css/ca1.css" rel="stylesheet" type="text/css"
+	data-styleid="ca1" />
+
+<link href="/assets/css/strc1.css" rel="stylesheet" type="text/css"
+	data-styleid="strc1" />
+
+<link href="/assets/css/mc1.css" rel="stylesheet" type="text/css"
+	data-styleid="mc1" />
+
+<link href="/assets/css/style-jjpggu4r1.css" rel="stylesheet" type="text/css"
+	data-styleid="style-jjpggu4r1" />
 
 </head>
 
 <body>
 
 	<div style="background-color: white; height: 50px; position: fixed">
-	
+
 	</div>
 
 
@@ -98,12 +134,13 @@
 	<div id="SITE_CONTAINER">
 		<style type="text/css" data-styleid="uploadedFonts"></style>
 		<div>
-			<link href="/css/theme_fonts.css" rel="stylesheet" />
-			<link href="/css/theme_colors.css" rel="stylesheet" />
+			<link href="/assets/css/theme_fonts.css" rel="stylesheet" />
+			<link href="/assets/css/theme_colors.css" rel="stylesheet" />
 		</div>
 
 		<div data-aid="stylesContainer">
-			<%@include file="link.jsp"%>
+
+
 			<style type="text/css" data-styleid="AutoWidthAnchorSkin">
 .AutoWidthAnchorSkin {
 	visibility: hidden;
@@ -111,16 +148,16 @@
 }
 </style>
 
-			<link href="/css/style-jt5p2m4e.css" rel="stylesheet"
+			<link href="/assets/css/style-jt5p2m4e.css" rel="stylesheet"
 				data-styleid="style-jt5p2m4e" />
 
-			<link href="/css/style-jt5p2mh1.css" rel="stylesheet"
+			<link href="/assets/css/style-jt5p2mh1.css" rel="stylesheet"
 				data-styleid="style-jt5p2mh1" />
 
-			<link href="/css/style-jt5p580p.css" rel="stylesheet"
+			<link href="/assets/css/style-jt5p580p.css" rel="stylesheet"
 				data-styleid="style-jt5p580p" />
 
-			<link href="/css/style-jjwfa6ut.css" rel="stylesheet"
+			<link href="/assets/css/style-jjwfa6ut.css" rel="stylesheet"
 				data-styleid="style-jjwfa6ut" />
 		</div>
 
@@ -187,7 +224,7 @@
 				}
 			</script>
 
-			<script src="js/script07.js" type="text/javascript"></script>
+			<script src="/assets/js/script07.js" type="text/javascript"></script>
 			<script type="text/javascript">
 				var timeSpentInSSR = 1545;
 			</script>

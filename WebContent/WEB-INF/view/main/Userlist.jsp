@@ -1,9 +1,34 @@
+<%@page import="poly.util.CmmUtil"%>
+<%@page import="poly.dto.PagingDTO"%>
+<%@page import="poly.dto.PerDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>환자목록</title>
+	
+    
+    <%
+    	ArrayList<PerDTO> plist = (ArrayList<PerDTO>) request.getAttribute("allsheet");
+    
+    	PagingDTO paging = (PagingDTO) request.getAttribute("paging");
+    	
+    	if (plist==null){
+    		plist=new ArrayList<PerDTO>();
+    	}
+    	
+    %>
+    
+    <script type="text/javascript">
+    
+    // 페이지 이동.
+  	function goPage(page){
+  		var pageCount = <%=paging.getPageCount()%>;
+		location.href="Userlist.do?pageCount="+pageCount+"&pageNum="+page;
+	}
+    </script>
 </head>
 <body>
 	<!-- 합쳐지고 최소화된 최신 CSS -->
@@ -15,57 +40,57 @@
 	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-	<link href="/css/theme_fonts.css" rel="stylesheet" />
-	<link href="/css/theme_colors.css" rel="stylesheet" />
+	<link href="/assets/css/theme_fonts.css" rel="stylesheet" />
+	<link href="/assets/css/theme_colors.css" rel="stylesheet" />
 
-	<link rel="stylesheet" type="text/css" href="/css/viewer_min.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/viewer_min.css" />
 
-	<link href="/css/pc1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/pc1.css" rel="stylesheet" type="text/css"
 		data-styleid="pc1" />
 
-	<link href="/css/siteBackground.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/siteBackground.css" rel="stylesheet" type="text/css"
 		data-styleid="siteBackground" />
 
-	<link href="/css/style-jnitutu5.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jnitutu5.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jnitutu5" />
 
-	<link href="/css/style-jnej9x48.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jnej9x48.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jnej9x48" />
 
-	<link href="/css/p1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/p1.css" rel="stylesheet" type="text/css"
 		data-styleid="p1" />
 
-	<link href="/css/style-jqccasb4.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jqccasb4.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jqccasb4" />
 
-	<link href="/css/style-jkjozsak.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jkjozsak.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jkjozsak" />
 
-	<link href="/css/lb1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/lb1.css" rel="stylesheet" type="text/css"
 		data-styleid="lb1" />
 
-	<link href="/css/style-jncrii45.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jncrii45.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jncrii45" />
 
-	<link href="/css/style-jezowobv.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jezowobv.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jezowobv" />
 
-	<link href="/css/txtNew.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/txtNew.css" rel="stylesheet" type="text/css"
 		data-styleid="txtNew" />
 
-	<link href="/css/style-jibfh6j53.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jibfh6j53.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jibfh6j53" />
 
-	<link href="/css/ca1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/ca1.css" rel="stylesheet" type="text/css"
 		data-styleid="ca1" />
 
-	<link href="/css/strc1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/strc1.css" rel="stylesheet" type="text/css"
 		data-styleid="strc1" />
 
-	<link href="/css/mc1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/mc1.css" rel="stylesheet" type="text/css"
 		data-styleid="mc1" />
 
-	<link href="/css/style-jjpggu4r1.css" rel="stylesheet" type="text/css"
+	<link href="/assets/css/style-jjpggu4r1.css" rel="stylesheet" type="text/css"
 		data-styleid="style-jjpggu4r1" />
 
 	<header data-is-mobile="false" data-state="fixedPosition"
@@ -517,7 +542,7 @@
 		</div>
 	</header>
 	
-	
+	<!-- 페이지 -->	
 	
 	
 	<div class="container" style="margin-top: 10%;width: 50%;">
@@ -534,30 +559,78 @@
 					<td style="width:20%;">날짜</td>
 				</tr>
 				<!-- 게시물용 환자 목록 가져오기 -->
+				<%for( PerDTO pdto : plist ) {%>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td><%=CmmUtil.nvl(pdto.getS_SEQ()) %></td>
+					<td><%=CmmUtil.nvl(pdto.getName()) %></td>
+					<td><%=CmmUtil.nvl(pdto.getPres()) %></td>
+					<td><%=CmmUtil.nvl(pdto.getDname()) %></td>
+					<td><%=CmmUtil.nvl(pdto.getDate()) %></td>
 				</tr>
-
+				<%} %>
 			</table>
 			
-			<a class="btn btn-default pull-right">작성</a>
+			
+			
+			<a class="btn btn-default pull-right" href="WritePage.do">작성</a>
 			
 		<div class="text-center">
 		
 			<ul class="pagination">
-				<li><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
-				<li><a href="">4</a></li>
-				<li><a href="">5</a></li>
+				<%=
+				fnPaging(paging.getPageCount(), 10, paging.getPageNum(), paging.getTotalCount())
+				%>
 			</ul>
 		</div>
 	</div>
-
-
 </body>
 </html>
+
+<%!
+//페이지num, 전체Data count만 전달받아 출력.
+private String fnPaging(int pageNum, int totalCount){
+	int pageCount = 10; // 페이지별 출력 row 수
+int blockCount = 10; // 화면에 출력할 block 수
+return fnPaging(pageCount, blockCount, pageNum, totalCount);
+}
+
+private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCount){
+	String pagingStr = "";
+	
+	// 전체 페이지수
+	int totalPageCount = totalCount / pageCount; // 전체 페이지 수
+	if(totalCount % pageCount > 0) totalPageCount ++ ; // 전체 페이지수+1 (나머지가 있을 경우.)
+	
+	// 전체 블럭수
+	int totalBlockCount = totalPageCount / blockCount; // 전체 블럭수
+	if(totalBlockCount % blockCount > 0) totalBlockCount ++ ; // 전체 블럭수+1 (나머지가 있을 경우.)
+	
+	// 현재 블럭의 시작 페이지
+	int startPage = pageNum / blockCount * blockCount + 1;
+	if(pageNum % blockCount == 0) startPage -= blockCount;
+	
+	// 현재 블럭의 마지막 페이지.
+	int endPage = startPage + blockCount - 1;
+	if(endPage > totalPageCount) endPage = totalPageCount;
+	
+	//만약 현재 블럭의 시작 페이지가 1보다 크다면. 이전 블럭 . 처음 블럭 버튼 생성.
+		if(startPage > 1){
+			//pagingStr = "[<<1][<"+(startPage-1)+"]";
+			pagingStr = "<li><a onclick=goPage(1)> << </a></li>";
+			pagingStr = "<li><a onclick=gopage("+(startPage-1)+")> < </a></li>";
+		}
+		
+		for(int i = startPage ; i <= endPage ; i++){
+			pagingStr += "<li><a onclick='goPage("+i+")>"+i+"</a></li>";
+		}
+		
+		//만약 현재 블럭의 마지막 페이지가 전체 마지막 페이지보다 작다면. 다음블럭, 마지막 블럭 버튼 생성. 
+		if(endPage < totalPageCount){
+			//pagingStr += "[>"+(endPage+1)+"][>>"+totalPageCount+"]";
+			pagingStr += "<li><a onclick='goPage("+(endPage+1)+") > </a></li>";
+			pagingStr += "<li><a onclick='goPage("+(totalPageCount)+")'> >> </a></li>";
+		}
+		
+		return pagingStr;
+}
+%>

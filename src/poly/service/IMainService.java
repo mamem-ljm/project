@@ -17,4 +17,6 @@ public interface IMainService {
 
 	int getSheetTotalCount() throws Exception;
 
+	ArrayList<PerDTO> getallsheetlist();
+
 }

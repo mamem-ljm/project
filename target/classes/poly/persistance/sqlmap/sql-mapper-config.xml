@@ -7,5 +7,6 @@
 		<typeAlias type="poly.dto.NoticeDTO" alias="NoticeDTO"/>
 		<typeAlias type="poly.dto.PerDTO" alias="PerDTO"/>
 		<typeAlias type="poly.dto.UDTO" alias="UDTO"/>
+		<typeAlias type="poly.dto.PagingDTO" alias="PagingDTO"/>
     </typeAliases>
 </configuration>

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -30,11 +31,7 @@ public class MainController {
 	 * 비즈니스 로직(중요 로직을 수행하기 위해 사용되는 서비스를 메모리에 적재(싱글톤패턴 적용됨)
 	 */
 
-
-	Timer t = new Timer();
 	Timer t2 = new Timer();
-	
-	
 	
 	@Resource(name = "MainService")
 	private IMainService mainService;
@@ -53,9 +50,9 @@ public class MainController {
 			
 			@Override
 			public void run() {
-				/*log.info("welcome timer");*/
+				log.info("welcome timer");
 				
-				blockchain = mainService.getallsheet();
+				blockchain = mainService.getallsheetlist();
 
 				checkchain.setBlockchain(blockchain);
 				
@@ -72,13 +69,11 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="Userlist")
-	public String Userlist(HttpServletRequest req)throws Exception{
+	public String Userlist(HttpServletRequest req, Model model)throws Exception{
 		
 		log.info("Welcome Userlist");
 		
 		ArrayList<PerDTO> allsheet = new ArrayList<PerDTO>();
-		
-		req.setAttribute("allsheet",allsheet);
 		
 		int totalCount = mainService.getSheetTotalCount();
 		int pageNum = 1;
@@ -94,6 +89,14 @@ public class MainController {
 		paging.setPageCount(pageCount);
 		
 		allsheet = mainService.getallsheet(paging);
+		
+		model.addAttribute("allsheet",allsheet);
+		
+		model.addAttribute("paging",paging);
+		
+		allsheet = null;
+		
+		log.info("get allsheet end!!");
 		
 		return "/main/Userlist";
 	}

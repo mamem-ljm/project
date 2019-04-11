@@ -3,6 +3,7 @@ package poly.persistance.mapper;
 import java.util.ArrayList;
 
 import config.Mapper;
+import poly.dto.PagingDTO;
 import poly.dto.PerDTO;
 import poly.dto.UDTO;
 import poly.util.Block;
@@ -14,10 +15,12 @@ public interface MainMapper {
 
 	PerDTO getData();
 
-	ArrayList<PerDTO> getallsheet();
-
 	void SendUser(UDTO udto);
 
 	public int getSheetTotalCount() throws Exception;
+
+	ArrayList<PerDTO> getallsheet(PagingDTO paging);
+
+	ArrayList<PerDTO> getallsheetlist();
 
 }

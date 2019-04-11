@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import poly.dto.PagingDTO;
 import poly.dto.PerDTO;
 import poly.dto.UDTO;
 import poly.persistance.mapper.MainMapper;
@@ -37,14 +38,6 @@ public class MainService implements IMainService{
 		mainMapper.SendData(pdto);
 		
 	}
-	
-
-	@Override
-	public ArrayList<PerDTO> getallsheet(){
-		// TODO Auto-generated method stub
-		
-		return mainMapper.getallsheet();
-	}
 
 	@Override
 	public void SendUser(UDTO udto) throws Exception {
@@ -57,6 +50,21 @@ public class MainService implements IMainService{
 	public int getSheetTotalCount() throws Exception {
 		// TODO Auto-generated method stub
 		return mainMapper.getSheetTotalCount();
+	}
+
+
+	@Override
+	public ArrayList<PerDTO> getallsheet(PagingDTO paging) {
+		// TODO Auto-generated method stub
+		
+		return mainMapper.getallsheet(paging);
+	}
+
+	//블록 체크를 위한 메서드
+	@Override
+	public ArrayList<PerDTO> getallsheetlist() {
+		// TODO Auto-generated method stub
+		return mainMapper.getallsheetlist();
 	}
 	
 	

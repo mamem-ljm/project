@@ -13,6 +13,14 @@
 		s_seq DESC LIMIT 1
 </select>
 
+<select id="getallsheetlist" resultType="PerDTO">
+	SELECT
+		S_HASH AS hash,
+		S_CONTENT AS content
+	FROM
+		sheet_list
+</select>
+
 
 <!-- insert sheet -->
 <insert id="SendData" parameterType="PerDTO">
@@ -38,15 +46,20 @@
 	)
 </insert>
 
-<select id="getallsheet" resultType="PerDTO">
+<select id="getallsheet" resultType="PerDTO" parameterType="PagingDTO">
+	SET
+		@ROWNUM:=#{pageNum};
 	SELECT
+		@ROWNUM:=@ROWNUM+1 AS no,
 		S_SEQ AS s_seq,
-		S_NAME AS s_name,
-		S_PRES AS s_pres,
+		S_NAME AS name,
 		S_DNAME AS dname,
-		S_DATE AS date
+		S_DATE AS date,
+		S_PRES AS pres
 	FROM
 		sheet_list
+	LIMIT
+		#{pageNum},10
 </select>
 
 <select id="getSheetTotalCount" resultType="java.lang.Integer">
@@ -73,4 +86,6 @@ INSERT INTO
 		#{pnumber}
 	)
 </insert> -->
+
+
 </mapper>

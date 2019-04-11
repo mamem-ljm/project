@@ -1,6 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 <div id="masterPage" class="mesh-layout" data-mesh-layout="grid">
 	<header data-is-mobile="false" data-state="fixedPosition"
 		data-site-width="980" data-header-top="0"
@@ -336,9 +348,8 @@
 																	aria-hidden="false"
 																	style="width: 15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																	role="button" tabindex="0" aria-haspopup="false"
-																	data-listposition="center"
-																	href=""
-																	target="_self" id="comp-ja27wet60linkElement"
+																	data-listposition="center" href="" target="_self"
+																	id="comp-ja27wet60linkElement"
 																	class="style-jqccasb4repeaterButtonlinkElement"><div
 																			class="style-jqccasb4repeaterButton_gapper">
 																			<div style="text-align: right" id="comp-ja27wet60bg"
@@ -358,12 +369,10 @@
 																	id="comp-ja27wet61"
 																	data-original-gap-between-text-and-btn="11"
 																	aria-hidden="false"
-																	style="width:15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
+																	style="width: 15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																	role="button" tabindex="0" aria-haspopup="false"
-																	data-listposition="center"
-																	href=""
-																	target="_self" data-keep-roots="true"
-																	data-anchor="dataItem-jk9smvoe"
+																	data-listposition="center" href="" target="_self"
+																	data-keep-roots="true" data-anchor="dataItem-jk9smvoe"
 																	id="comp-ja27wet61linkElement"
 																	class="style-jqccasb4repeaterButtonlinkElement"><div
 																			class="style-jqccasb4repeaterButton_gapper">
@@ -451,7 +460,7 @@
 																				</p>
 																			</div>
 																		</div></a></li> -->
-																		
+
 																<li data-direction="ltr" data-listposition="right"
 																	data-data-id="dataItem-jjpggu3z"
 																	class="style-jqccasb4repeaterButton"
@@ -461,8 +470,7 @@
 																	aria-hidden="false"
 																	style="width: 15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																	role="button" tabindex="0" aria-haspopup="false"
-																	data-listposition="right"
-																	href="Userlist.do"
+																	data-listposition="right" href="Userlist.do"
 																	target="_self" id="comp-ja27wet64linkElement"
 																	class="style-jqccasb4repeaterButtonlinkElement"><div
 																			class="style-jqccasb4repeaterButton_gapper">
@@ -473,11 +481,11 @@
 																					class="style-jqccasb4repeaterButtonlabel">
 																					<font style="vertical-align: inherit;"><font
 																						style="vertical-align: inherit;">작성</font></font>
-																						
+
 																				</p>
 																			</div>
 																		</div></a></li>
-																		
+
 																<li data-direction="ltr" data-listposition="right"
 																	data-data-id="dataItem-jjpggu3z"
 																	class="style-jqccasb4repeaterButton"
@@ -487,8 +495,7 @@
 																	aria-hidden="false"
 																	style="width: 15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																	role="button" tabindex="0" aria-haspopup="false"
-																	data-listposition="right"
-																	href="Uinsert.do"
+																	data-listposition="right" href="Uinsert.do"
 																	target="_self" id="comp-ja27wet64linkElement"
 																	class="style-jqccasb4repeaterButtonlinkElement"><div
 																			class="style-jqccasb4repeaterButton_gapper">
@@ -502,8 +509,8 @@
 																				</p>
 																			</div>
 																		</div></a></li>
-																
-																		
+
+
 																<!-- <li data-listposition="right"
 																	class="style-jqccasb4repeaterButton"
 																	data-state="menu  idle header notMobile"
@@ -527,7 +534,7 @@
 																				</p>
 																			</div>
 																		</div></a></li> -->
-																		
+
 															</ul>
 															<div id="comp-ja27wet6moreButton"
 																class="style-jqccasb4moreButton"></div>
@@ -757,8 +764,7 @@
 															<p class="font_9" style="line-height: 2em;">
 																<span class="color_11"><font
 																	style="vertical-align: inherit;"><font
-																		style="vertical-align: inherit;">강서구
-																			&nbsp;</font></font></span>
+																		style="vertical-align: inherit;">강서구 &nbsp;</font></font></span>
 															</p>
 
 															<p class="font_9" style="line-height: 2em;">
@@ -1535,7 +1541,7 @@
 
 #comp-ja28p1gn {
 	position: relative;
-	margin: 0px 0px 10px calc(( 100% - 980px)* 0.5);
+	margin: 0px 0px 0px 20.5%;
 	left: 407px;
 	grid-area: 4/1/5/2;
 	justify-self: start;
@@ -1607,19 +1613,24 @@
 																					~ 오후 4시 30 분</font></font></span>
 																	</p>
 																</div>
+
 																<div id="comp-ja28p1gn" data-align="center"
 																	data-disabled="false" data-margin="0"
 																	data-should-use-flex="true" data-width="165"
-																	data-height="41" class="style-jkjozsak"
+																	data-height="41" class="style-jkjozsak guideBox"
 																	data-state="desktop shouldUseFlex center"
 																	style="height: 41px; min-height: 21px; width: 165px;">
-																	<a
-																		href=""
+																	<!-- <a onclick="show()" href="javascript:void(0)"
 																		target="_self" role="button" id="comp-ja28p1gnlink"
 																		class="g-transparent-a style-jkjozsaklink"><span
-																		id="comp-ja28p1gnlabel" class="style-jkjozsaklabel" style="color:gray;"><font
+																		id="comp-ja28p1gnlabel"
+																		class="style-jkjozsaklabel textbtn"
+																		style="color: gray;"><font
 																			style="vertical-align: inherit;"><font
-																				style="vertical-align: inherit;">로그인</font></font></span></a>
+																				style="vertical-align: inherit;">로그인</font></font></span></a> -->
+																	<%@include file="login.jsp" %>
+
+
 																</div>
 															</div>
 														</div>
@@ -2810,7 +2821,7 @@
 																							style="position: relative; width: 100%; height: 100%;">
 																							<img id="comp-ja2hd3vnbalatamediaimageimage"
 																								alt="" data-type="image"
-																								src="/img/hand.png"
+																								src="/assets/img/hand.png"
 																								style="width: 100%; height: 100%; object-fit: cover;">
 																						</div>
 																					</div>
@@ -2978,7 +2989,7 @@
 																							style="position: relative; width: 100%; height: 100%;">
 																							<img id="comp-ja2hdenwbalatamediaimageimage"
 																								alt="" data-type="image"
-																								src="/img/microscope.png"
+																								src="/assets/img/microscope.png"
 																								style="width: 100%; height: 100%; object-fit: cover;">
 																						</div>
 																					</div>
@@ -3146,10 +3157,10 @@
 																						<div data-type="image" data-style=""
 																							class="bgImage"
 																							id="comp-ja2hdczmbalatamediaimage"
-																							style="position: relative; width:100%; height:100%;">
+																							style="position: relative; width: 100%; height: 100%;">
 																							<img id="comp-ja2hdczmbalatamediaimageimage"
 																								alt="" data-type="image"
-																								src="/img/doctor.png"
+																								src="/assets/img/doctor.png"
 																								style="width: 100%; height: 100%; object-fit: cover;">
 																						</div>
 																					</div>
@@ -3322,7 +3333,7 @@
 																							style="position: relative; width: 100%; height: 100%;">
 																							<img id="comp-ja6iwejybalatamediaimageimage"
 																								alt="" data-type="image"
-																								src="/img/syringe.png"
+																								src="/assets/img/syringe.png"
 																								style="width: 100%; height: 100%; object-fit: cover;">
 																						</div>
 																					</div>
@@ -3845,7 +3856,7 @@
 	position: absolute;
 	grid-area: 2/1/3/2;
 	pointer-events: initial;
-	background-color:white;
+	background-color: white;
 }
 
 #comp-jezjuctv {
