@@ -12,29 +12,84 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import poly.dto.UDTO;
 import poly.service.ILoginService;
 
-
 @Controller
 public class SNSLoginController {
-	
+
 	private Logger log = Logger.getLogger(this.getClass());
 
 	@Resource(name = "LoginService")
 	private ILoginService loginService;
-	
-	@RequestMapping(name="kakao/login", produces = "application/json", method= {RequestMethod.GET, RequestMethod.POST})
-	public String kakao_login(HttpSession session, HttpServletRequest req)throws Exception{
+
+	@RequestMapping(value = "kakao/login")
+	public String kakao_login(HttpSession session, HttpServletRequest req) throws Exception {
+		
+		log.info("welcome kakao login");
 		
 		String id = req.getParameter("UserID");
 		String name = req.getParameter("name");
+
+		UDTO udto = new UDTO();
+
+		String match = "[^\uAC00-\uD7A3xfe0-9a-zA-Z\\s]";
+		name = name.replaceAll(match, "");
+
+		log.info(name);
+
+		udto.setId(id);
+		udto.setName(name);
+
+		String findid = "";
+
+		findid = loginService.selectid(id);
+
+		log.info("findid : " + findid);
+		
+
+		String url = "";
+		if (findid == null) {
+			session.setAttribute("id", id);
+			session.setAttribute("name", name);
+			
+			url =  "/login/userinfoinsert";
+			
+		} else if (findid != null) {
+			
+			url = "redirect:/home.do";
+		}
+		
+		return url;
+
+	}
+	
+	@RequestMapping(value="kakao/userinfo", method=RequestMethod.POST)
+	public String userinfo(HttpSession session, HttpServletRequest req) throws Exception{
+		log.info("welcome userinfo");
+		
+		String name = req.getParameter("name");
+		String id = req.getParameter("id");
+		String addr = req.getParameter("addr");
+		String hp = req.getParameter("hp");
+		String pnumber = req.getParameter("pnumber");
+		String gender = req.getParameter("gender");
 		
 		UDTO udto = new UDTO();
 		
+		udto.setAddr(addr);
+		udto.setGender(gender);
+		udto.setHp(hp);
 		udto.setId(id);
 		udto.setName(name);
+		udto.setPnumber(pnumber);
 		
+		loginService.Signupinsert(udto);
 		
-		
-		
+		return "redirect:/home.do";
+	}
+	
+	@RequestMapping(value="logout")
+	public String logout(HttpSession session) throws Exception{
+		session.removeAttribute("id");
+		session.removeAttribute("name");
 		return "redirect:/home.do";
 	}
 

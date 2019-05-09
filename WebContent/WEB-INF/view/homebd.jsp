@@ -1,3 +1,4 @@
+<%@page import="poly.util.CmmUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -12,7 +13,9 @@
 
 	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+<%
+	String id = CmmUtil.nvl((String)session.getAttribute("id"));
+%>
 <div id="masterPage" class="mesh-layout" data-mesh-layout="grid">
 	<header data-is-mobile="false" data-state="fixedPosition"
 		data-site-width="980" data-header-top="0"
@@ -31,6 +34,7 @@
 			</div>
 			<div id="SITE_HEADERinlineContent"
 				class="style-jnej9x48inlineContent">
+				
 				<style id="SITE_HEADER-mesh-styles">
 #SITE_HEADERinlineContent {
 	height: auto;
@@ -79,8 +83,17 @@
 </style>
 				<div id="SITE_HEADERinlineContent-gridWrapper"
 					data-mesh-internal="true">
+					<%if(id!=""){ %>
+					<a class="btn btn-primary" style="float: right;margin-top: 20px;margin-right: 80px" href="/logout.do">로그아웃</a>
+					<script>
+						function button_click(){
+							location.href="/logout";
+						}
+					</script>
+					<%} %>
 					<div id="SITE_HEADERinlineContent-gridContainer"
 						data-mesh-internal="true">
+						
 						<section
 							style="left: 0; width: 100%; min-width: 820px; height: auto; top:; bottom:; right:; position:; margin-left: 0"
 							data-responsive="true" data-is-screen-width="true"
@@ -1628,8 +1641,9 @@
 																		style="color: gray;"><font
 																			style="vertical-align: inherit;"><font
 																				style="vertical-align: inherit;">로그인</font></font></span></a> -->
-																	<%@include file="login.jsp" %>
-
+																	<%if(id == ""){%>
+																		<%@include file="login.jsp" %>
+																	<%} %>
 
 																</div>
 															</div>

@@ -9,10 +9,12 @@
 
 </head>
 <body>
+
 	<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
 		src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"
 		width="300" />
 	</a>
+
 	<!-- 로그인 -->
 	<script type='text/javascript'>
 		var UserID = '', UserEmail = '', UserNickName = '', birth = '';
@@ -39,26 +41,13 @@
 							console.log(res.id);
 							console.log(res.properties.nickname);
 							console.log(authObj.access_token);
-							/* console.log(res.kakao_account.birth); */
+							
 
 							location.href = 'kakao/login.do?name='+UserNickName+'&UserID='+UserID;
-							/* location.href = 'kakao/login.do?UserID=' + UserID + '&UserNickName=' + UserNickName; */ 
+							 
 									
 							Kakao.Auth.setAccessToken(authObj.access_token);
 							
-							
-							
-							Kakao.API.request({
-								url:'/v1/user/me',
-								/* data:{
-									propertyKeys:['kakao_account.birthday', 'kakao_account.gender']
-								}, */
-
-								success:function(res){
-									console.log(res);
-								}
-							
-							})
 							
 							
 						},

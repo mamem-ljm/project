@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- JAVA와 연결할 Mapper 파일 설정 -->
+<mapper namespace="poly.persistance.mapper.LoginMapper">
+	<!-- insert user -->
+	<insert id="Signupinsert" parameterType="UDTO">
+		INSERT INTO
+		user_list
+		(
+		U_ID,
+		U_NAME,
+		U_ADDR,
+		U_HP,
+		U_GENDER,
+		U_PNUMBER
+		)
+		VALUES(
+		#{id},
+		#{name},
+		#{addr},
+		#{hp},
+		#{gender},
+		#{pnumber}
+		)
+	</insert>
+	
+	<select id="selectid" parameterType="java.lang.String" resultType="java.lang.String">
+		SELECT
+			U_ID
+		FROM
+			user_list
+		WHERE
+			U_ID = #{id}
+	</select>
+</mapper>
