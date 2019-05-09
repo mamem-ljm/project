@@ -2,8 +2,6 @@ package poly.util;
 
 import java.util.Random;
 
-import poly.dto.PerDTO;
-
 public class Block {
 	private String hash;
 	
@@ -58,16 +56,16 @@ public class Block {
 		/*System.out.println("previous : " + previous);
 		System.out.println("content : " + content);
 		System.out.println("current : " + current);*/
-		
+		String hash = "";
 		int i =0;
 		while(i<26) {
 			i++;
-			String hash = calculateHash(previous, i, content);
+			hash = calculateHash(previous, i, content);
 			if(hash.equals(current)) {
 				/*System.out.println("calc hash : " + hash);
 				System.out.println("current hash : " + current);*/
 				
-				System.out.println("end check");
+				/*System.out.println("end check");*/
 				return true;
 			}
 		}

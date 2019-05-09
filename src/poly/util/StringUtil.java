@@ -1,12 +1,6 @@
 package poly.util;
 
-import java.security.Key;
 import java.security.MessageDigest;
-import java.security.PrivateKey;
-import java.security.PublicKey;
-import java.security.Signature;
-import java.util.ArrayList;
-import java.util.Base64;
 
 
 public class StringUtil {
@@ -26,6 +20,8 @@ public class StringUtil {
 				}
 				hexString.append(hex);
 			}
+			
+			hash = null;
 
 			return hexString.toString();
 

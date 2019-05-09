@@ -1,8 +1,6 @@
 package poly.controller;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -30,8 +28,6 @@ public class MainController {
 	/*
 	 * 비즈니스 로직(중요 로직을 수행하기 위해 사용되는 서비스를 메모리에 적재(싱글톤패턴 적용됨)
 	 */
-
-	Timer t2 = new Timer();
 	
 	@Resource(name = "MainService")
 	private IMainService mainService;
@@ -45,26 +41,20 @@ public class MainController {
 
 		log.info("welcome homepage");
 		
-		//블록 체크 10초 마다 실행
-		TimerTask m_task = new TimerTask() {
-			
-			@Override
-			public void run() {
-				log.info("welcome timer");
-				
-				blockchain = mainService.getallsheetlist();
+		blockchain = mainService.getallsheetlist();
 
-				checkchain.setBlockchain(blockchain);
-				
-				checkchain.run();
-				
-				blockchain = null;
-
-			}
-		};
+		checkchain.setBlockchain(blockchain);
 		
-		/*t2.schedule(m_task, 0, 10000);*/
-
+		blockchain = null;
+		
+		Thread.State state = checkchain.getState();
+		
+		//if thread not stating
+		if(!(state == Thread.State.RUNNABLE)) {
+			System.out.println("not run thread");
+			checkchain.start();
+		}
+		
 		return "/home";
 	}
 	

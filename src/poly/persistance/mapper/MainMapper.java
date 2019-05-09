@@ -6,7 +6,6 @@ import config.Mapper;
 import poly.dto.PagingDTO;
 import poly.dto.PerDTO;
 import poly.dto.UDTO;
-import poly.util.Block;
 
 @Mapper("MainMapper")
 public interface MainMapper {

@@ -2,11 +2,19 @@ package poly.dto;
 
 public class UDTO {
 	private String name;
+	private String id;
 	private String pnumber;
 	private String addr;
 	private String hp;
 	private String gender;
 	private String u_seq;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
