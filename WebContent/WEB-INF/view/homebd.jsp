@@ -17,21 +17,28 @@
 	String id = CmmUtil.nvl((String)session.getAttribute("id"));
 %>
 <div id="masterPage" class="mesh-layout" data-mesh-layout="grid">
+
 	<header data-is-mobile="false" data-state="fixedPosition"
 		data-site-width="980" data-header-top="0"
 		style="position: fixed; top: 0; left: 0; margin-left: 0; width: 100%; min-width: 980px; bottom:; right:; z-index: 50"
 		class="style-jnej9x48" id="SITE_HEADER">
+
 		<div style="left: 0; width: 100%"
 			id="SITE_HEADERscreenWidthBackground"
 			class="style-jnej9x48screenWidthBackground">
+			
+			
+			
 			<div class="style-jnej9x48_bg"></div>
 		</div>
 		<div id="SITE_HEADERcenteredContent"
 			class="style-jnej9x48centeredContent">
+			
 			<div style="margin-left: calc(( 100% - 980px)/2); width: 980px"
 				id="SITE_HEADERbg" class="style-jnej9x48bg">
 				<div class="style-jnej9x48_bg-center"></div>
 			</div>
+			
 			<div id="SITE_HEADERinlineContent"
 				class="style-jnej9x48inlineContent">
 				
@@ -83,14 +90,7 @@
 </style>
 				<div id="SITE_HEADERinlineContent-gridWrapper"
 					data-mesh-internal="true">
-					<%if(id!=""){ %>
-					<a class="btn btn-primary" style="float: right;margin-top: 20px;margin-right: 80px" href="/logout.do">로그아웃</a>
-					<script>
-						function button_click(){
-							location.href="/logout";
-						}
-					</script>
-					<%} %>
+					
 					<div id="SITE_HEADERinlineContent-gridContainer"
 						data-mesh-internal="true">
 						
@@ -449,31 +449,8 @@
 																				</p>
 																			</div>
 																		</div></a></li> -->
-																<!-- <li data-direction="ltr" data-listposition="right"
-																	data-data-id="dataItem-jjpggu3z"
-																	class="style-jqccasb4repeaterButton"
-																	data-state="menu  idle link notMobile"
-																	id="comp-ja27wet64"
-																	data-original-gap-between-text-and-btn="11"
-																	aria-hidden="false"
-																	style="width: 61px; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
-																	role="button" tabindex="0" aria-haspopup="false"
-																	data-listposition="right"
-																	href=""
-																	target="_self" id="comp-ja27wet64linkElement"
-																	class="style-jqccasb4repeaterButtonlinkElement"><div
-																			class="style-jqccasb4repeaterButton_gapper">
-																			<div style="text-align: right" id="comp-ja27wet64bg"
-																				class="style-jqccasb4repeaterButtonbg">
-																				<p style="text-align: right; line-height: 28px;"
-																					id="comp-ja27wet64label"
-																					class="style-jqccasb4repeaterButtonlabel">
-																					<font style="vertical-align: inherit;"><font
-																						style="vertical-align: inherit;">접촉</font></font>
-																				</p>
-																			</div>
-																		</div></a></li> -->
-
+																
+			
 																<li data-direction="ltr" data-listposition="right"
 																	data-data-id="dataItem-jjpggu3z"
 																	class="style-jqccasb4repeaterButton"
@@ -523,30 +500,32 @@
 																			</div>
 																		</div></a></li>
 
-
-																<!-- <li data-listposition="right"
+															<%if(id!="") {%>
+																<li data-direction="ltr" data-listposition="right"
+																	data-data-id="dataItem-jjpggu3z"
 																	class="style-jqccasb4repeaterButton"
-																	data-state="menu  idle header notMobile"
-																	id="comp-ja27wet6__more__"
+																	data-state="menu  idle link notMobile"
+																	id="comp-ja27wet64"
 																	data-original-gap-between-text-and-btn="11"
-																	aria-hidden="true"
-																	style="height: 0px; overflow: hidden; position: absolute;"><a
-																	role="button" tabindex="-1" aria-haspopup="true"
+																	aria-hidden="false"
+																	style="width: 61px; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
+																	role="button" tabindex="0" aria-haspopup="false"
 																	data-listposition="right"
-																	id="comp-ja27wet6__more__linkElement"
+																	href="logout.do"
+																	target="_self" id="comp-ja27wet64linkElement"
 																	class="style-jqccasb4repeaterButtonlinkElement"><div
 																			class="style-jqccasb4repeaterButton_gapper">
-																			<div style="text-align: right"
-																				id="comp-ja27wet6__more__bg"
+																			<div style="text-align: right" id="comp-ja27wet64bg"
 																				class="style-jqccasb4repeaterButtonbg">
-																				<p style="text-align: right"
-																					id="comp-ja27wet6__more__label"
+																				<p style="text-align: right; line-height: 28px;"
+																					id="comp-ja27wet64label"
 																					class="style-jqccasb4repeaterButtonlabel">
 																					<font style="vertical-align: inherit;"><font
-																						style="vertical-align: inherit;">더</font></font>
+																						style="vertical-align: inherit;">로그아웃</font></font>
 																				</p>
 																			</div>
-																		</div></a></li> -->
+																		</div></a></li>
+															<%} %>
 
 															</ul>
 															<div id="comp-ja27wet6moreButton"
@@ -786,7 +765,7 @@
 																		style="vertical-align: inherit;">전화 :
 																			123-456-7890</font></font></span>
 															</p>
-
+															
 															<p class="font_9" style="line-height: 2em;">
 																<span class="wixGuard">​</span>
 															</p>
@@ -807,6 +786,7 @@
 										</div>
 									</div>
 								</div>
+								
 								<div
 									style="position: relative; width: 100%; left: 0; flex: 304; margin-left: 0px; min-width: 304px; top: 0; margin-top: 0; margin-bottom: 0; height:; display: flex; bottom:; right:"
 									data-content-width="304" data-is-mesh="true" class="mc1"

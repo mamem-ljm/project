@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import poly.dto.UDTO;
 import poly.service.ILoginService;
+import poly.util.CmmUtil;
 
 @Controller
 public class SNSLoginController {
@@ -40,20 +41,20 @@ public class SNSLoginController {
 
 		String findid = "";
 
-		findid = loginService.selectid(id);
+		findid = CmmUtil.nvl(loginService.selectid(id));
 
 		log.info("findid : " + findid);
 		
 
 		String url = "";
-		if (findid == null) {
+		if (findid == "") {
 			session.setAttribute("id", id);
 			session.setAttribute("name", name);
-			
 			url =  "/login/userinfoinsert";
 			
-		} else if (findid != null) {
-			
+		} else if (findid != "") {
+			session.setAttribute("id", id);
+			session.setAttribute("name", name);
 			url = "redirect:/home.do";
 		}
 		
@@ -83,14 +84,15 @@ public class SNSLoginController {
 		
 		loginService.Signupinsert(udto);
 		
+		session.setAttribute("id", id);
+		session.setAttribute("name", name);
+		
 		return "redirect:/home.do";
 	}
 	
 	@RequestMapping(value="logout")
 	public String logout(HttpSession session) throws Exception{
-		session.removeAttribute("id");
-		session.removeAttribute("name");
+		session.invalidate();
 		return "redirect:/home.do";
 	}
-
 }

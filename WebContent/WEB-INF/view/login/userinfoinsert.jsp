@@ -543,8 +543,13 @@
 							id="optionsRadios2" value="0" />여</td>
 					</tr>
 					<tr>
+						<th>의사번호</th>
+						<td><input type="text" placeholder="예:0000511" name="pnumber"
+							class="form-control" /></td>
+					</tr>
+					<tr>
 						<td colspan="2">
-							<input type="submit" value="등록" onclick="sendData()" class="pull-right btn btn-primary" />
+							<input type="submit" value="등록" class="pull-right btn btn-primary" />
 							<input type="button" value="리셋" class="pull-left pull-right btn btn-primary" />
 						</td>
 					</tr>

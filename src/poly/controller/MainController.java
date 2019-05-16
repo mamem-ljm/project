@@ -67,16 +67,20 @@ public class MainController {
 		
 		int totalCount = mainService.getSheetTotalCount();
 		int pageNum = 1;
-		int pageCount = 10;
+		int pageCount = 5;
 		
-		pageCount = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageCount"),"10"));
+		pageCount = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageCount"),"5"));
 		pageNum = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageNum"),"1"));
+		
+		log.info("totalCount : "+totalCount);
+		log.info("pageCount : "+pageCount);
+		log.info("pageNum : "+pageNum);
 		
 		PagingDTO paging = new PagingDTO();
 		
 		paging.setTotalCount(totalCount);
-		paging.setPageNum(pageNum);
 		paging.setPageCount(pageCount);
+		paging.setPageNum(pageNum);
 		
 		allsheet = mainService.getallsheet(paging);
 		

@@ -61,7 +61,7 @@
 	FROM
 		sheet_list
 	LIMIT
-		#{pageNum},10
+		#{pageNum},5
 </select>
 
 <select id="getSheetTotalCount" resultType="java.lang.Integer">
@@ -69,7 +69,7 @@
 	FROM sheet_list
 </select>
 
-<!-- <insert id="SendUser" parameterType="UDTO">
+<insert id="SendUser" parameterType="UDTO">
 INSERT INTO
 		user_list
 	(
@@ -87,7 +87,7 @@ INSERT INTO
 		#{gender},
 		#{pnumber}
 	)
-</insert> -->
+</insert>
 
 
 </mapper>
