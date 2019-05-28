@@ -35,7 +35,9 @@
 		S_DNAME,
 		S_LICENSE,
 		S_DATE,
-		S_PRES
+		S_PRES,
+		S_U_SEQ,
+		S_PNUMBER
 	)
 	VALUES(
 		#{content},
@@ -44,7 +46,9 @@
 		#{dname},
 		#{license},
 		#{date},
-		#{pres}
+		#{pres},
+		#{S_U_SEQ},
+		#{pnumber}
 	)
 </insert>
 
@@ -62,6 +66,12 @@
 		sheet_list
 	LIMIT
 		#{pageNum},5
+</select>
+
+<!-- 총 유저 수 가져오기 -->
+<select id="getusercount" resultType="java.lang.Integer">
+	SELECT COUNT(0) 
+	FROM user_list
 </select>
 
 <select id="getSheetTotalCount" resultType="java.lang.Integer">
@@ -89,5 +99,19 @@ INSERT INTO
 	)
 </insert>
 
+<select id="getalluser" resultType="UDTO" parameterType="PagingDTO">
+	SET
+		@ROWNUM:=#{pageNum};
+	SELECT
+		@ROWNUM:=@ROWNUM+1 AS no,
+		U_SEQ AS u_seq,
+		U_NAME AS name,
+		U_PNUMBER AS pnumber,
+		U_ADDR AS addr
+	FROM
+		user_list
+	LIMIT
+		#{pageNum},5
+</select>
 
 </mapper>

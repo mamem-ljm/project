@@ -27,95 +27,6 @@
 	content="width=980, user-scalable=yes" />
 
 
-<script src="/assets/js/script01.js" type="text/javascript">
-	
-</script>
-
-<script src="/assets/js/script02.js" type="text/javascript">
-	
-</script>
-
-<script src="/assets/js/script03.js" type="text/javascript">
-	
-</script>
-
-<script src="/assets/js/script04.js" type="text/javascript">
-	
-</script>
-
-<script src="/assets/js/script05.js" type="text/javascript">
-	
-</script>
-
-<script src="/assets/js/script06.js" type="text/javascript" id="sentry">
-	
-</script>
-
-<link id="viewerMainStyle" rel="stylesheet" type="text/css"
-	href="https://static.parastorage.com/services/wix-bolt/1.2147.0/node_modules/wix-santa/static/css/viewer.min.css">
-
-
-<link rel="canonical" href="https://leejmin60.wixsite.com/projectsite" />
-
-<meta property="og:title" content="Mysite" />
-
-<meta property="og:url"
-	content="https://leejmin60.wixsite.com/projectsite" />
-
-<meta property="og:site_name" content="Mysite" />
-
-<meta property="og:type" content="Website" />
-
-<link rel="stylesheet" type="text/css" href="/assets/css/viewer_min.css" />
-
-<link href="/assets/css/pc1.css" rel="stylesheet" type="text/css"
-	data-styleid="pc1" />
-
-<link href="/assets/css/siteBackground.css" rel="stylesheet" type="text/css"
-	data-styleid="siteBackground" />
-
-<link href="/assets/css/style-jnitutu5.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jnitutu5" />
-
-<link href="/assets/css/style-jnej9x48.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jnej9x48" />
-
-<link href="/assets/css/p1.css" rel="stylesheet" type="text/css"
-	data-styleid="p1" />
-
-<link href="/assets/css/style-jqccasb4.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jqccasb4" />
-
-<link href="/assets/css/style-jkjozsak.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jkjozsak" />
-
-<link href="/assets/css/lb1.css" rel="stylesheet" type="text/css"
-	data-styleid="lb1" />
-
-<link href="/assets/css/style-jncrii45.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jncrii45" />
-
-<link href="/assets/css/style-jezowobv.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jezowobv" />
-
-<link href="/assets/css/txtNew.css" rel="stylesheet" type="text/css"
-	data-styleid="txtNew" />
-
-<link href="/assets/css/style-jibfh6j53.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jibfh6j53" />
-
-<link href="/assets/css/ca1.css" rel="stylesheet" type="text/css"
-	data-styleid="ca1" />
-
-<link href="/assets/css/strc1.css" rel="stylesheet" type="text/css"
-	data-styleid="strc1" />
-
-<link href="/assets/css/mc1.css" rel="stylesheet" type="text/css"
-	data-styleid="mc1" />
-
-<link href="/assets/css/style-jjpggu4r1.css" rel="stylesheet" type="text/css"
-	data-styleid="style-jjpggu4r1" />
-
 </head>
 
 <body>
@@ -132,11 +43,8 @@
 	</script>
 
 	<div id="SITE_CONTAINER">
-		<style type="text/css" data-styleid="uploadedFonts"></style>
-		<div>
-			<link href="/assets/css/theme_fonts.css" rel="stylesheet" />
-			<link href="/assets/css/theme_colors.css" rel="stylesheet" />
-		</div>
+
+
 
 		<div data-aid="stylesContainer">
 
@@ -212,7 +120,11 @@
 				style="width: 100%; min-width: 980px; top: 50px; padding-bottom: 0"
 				aria-hidden="false">
 				<div id="masterPage" class="mesh-layout" data-mesh-layout="grid">
-					<%@include file="homebd.jsp"%>
+
+
+						<%@include file="homebd.jsp"%>
+
+					
 				</div>
 			</div>
 
@@ -230,7 +142,6 @@
 			</script>
 		</div>
 	</div>
-	<%-- <%@include file="projectsite.jsp" %> --%>
 
 </body>
 </html>

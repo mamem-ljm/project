@@ -4,6 +4,7 @@ public class PagingDTO {
 	private int pageNum;
 	private int pageCount;
 	private int totalCount;
+	private String u_seq;
 	
 	
 	public int getPageNum() {
@@ -23,5 +24,11 @@ public class PagingDTO {
 	}
 	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
+	}
+	public String getU_seq() {
+		return u_seq;
+	}
+	public void setU_seq(String u_seq) {
+		this.u_seq = u_seq;
 	}
 }

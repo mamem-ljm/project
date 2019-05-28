@@ -7,7 +7,7 @@
 
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-</head>
+
 <body>
 
 	<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
@@ -24,7 +24,7 @@
 		// 카카오 로그인 버튼을 생성합니다.
 		function loginWithKakao() {
 			// 로그인 창을 띄웁니다.
-			Kakao.Auth.login({
+			Kakao.Auth.loginForm({
 				success : function(authObj) {
 
 					Kakao.API.request({
@@ -59,7 +59,7 @@
 				},
 				fail : function(err) {
 					alert(JSON.stringify(err));
-				}
+				},persistAccessToken:false
 			})
 			
 			

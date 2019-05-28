@@ -5,14 +5,14 @@
 	<!-- insert user -->
 	<insert id="Signupinsert" parameterType="UDTO">
 		INSERT INTO
-		user_list
+		sns_login
 		(
-		U_ID,
-		U_NAME,
-		U_ADDR,
-		U_HP,
-		U_GENDER,
-		U_PNUMBER
+		ID,
+		NAME,
+		ADDR,
+		HP,
+		GENDER,
+		PNUMBER
 		)
 		VALUES(
 		#{id},
@@ -26,10 +26,10 @@
 	
 	<select id="selectid" parameterType="java.lang.String" resultType="java.lang.String">
 		SELECT
-			U_ID
+			ID
 		FROM
-			user_list
+			sns_login
 		WHERE
-			U_ID = #{id}
+			ID = #{id}
 	</select>
 </mapper>

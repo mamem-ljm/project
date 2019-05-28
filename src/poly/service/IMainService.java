@@ -18,4 +18,8 @@ public interface IMainService {
 
 	ArrayList<PerDTO> getallsheetlist();
 
+	int getusercount() throws Exception;
+
+	ArrayList<PerDTO> getalluser(PagingDTO paging) throws Exception;
+
 }

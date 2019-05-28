@@ -40,11 +40,10 @@ public class SNSLoginController {
 		udto.setName(name);
 
 		String findid = "";
-
-		findid = CmmUtil.nvl(loginService.selectid(id));
-
+		
 		log.info("findid : " + findid);
 		
+		findid = CmmUtil.nvl(loginService.selectid(id));
 
 		String url = "";
 		if (findid == "") {
@@ -57,6 +56,8 @@ public class SNSLoginController {
 			session.setAttribute("name", name);
 			url = "redirect:/home.do";
 		}
+		
+		log.info(url);
 		
 		return url;
 

@@ -1,43 +1,42 @@
-<%@page import="poly.dto.UDTO"%>
-<%@page import="java.util.List"%>
-<%@page import="poly.util.CmmUtil"%>
 <%@page import="poly.dto.PagingDTO"%>
 <%@page import="poly.dto.PerDTO"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="poly.util.CmmUtil"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>환자목록</title>
-	
-    
-    <%
+<title>나의 진단서</title>
+</head>
+ 	<%
     	
-    	List<UDTO> ulist = (List<UDTO>) request.getAttribute("alluser");
+    	ArrayList<PerDTO> plist = (ArrayList<PerDTO>) request.getAttribute("allsheet");
     	
     	PagingDTO paging = (PagingDTO) request.getAttribute("paging");
     	
-    	if(ulist == null){
-    		ulist = new ArrayList<UDTO>();
+    	if(plist == null){
+    		plist = new ArrayList<PerDTO>();
     	}
     	
     %>
     
-    <script type="text/javascript">
+<body>
+
+	<%@include file="/assets/header.jsp" %>
+	
+	<!-- 페이지 -->
+	<script type="text/javascript">
     
     // 페이지 이동.
   	function goPage(page){
   		var pageCount=<%=paging.getPageCount()%>;
   		
-		location.href="Userlist.do?pageCount="+pageCount+"&pageNum="+page;
+		location.href="getsheetpage.do?pageCount="+pageCount+"&pageNum="+page+"&id="+<%=id%>;
 	}
     </script>
-</head>
-<body>
-	<%@include file="/assets/header.jsp" %>
-	
-	<!-- 페이지 -->
 <%!
 //페이지num, 전체Data count만 전달받아 출력.
 private String fnPaging(int pageNum, int totalCount){
@@ -85,6 +84,7 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 		
 		return pagingStr;
 }
+
 %>
 	
 	
@@ -93,32 +93,27 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 			
 			<table class="table">
 
-				<caption>환자 목록</caption>
+				<caption>진단 목록</caption>
 				
 				<tr>
 					
-					<td style="width:30%;">번호</td>
-					<td style="width:70%;">환자명</td>
-					<!-- 
-					<td style="width:40%;">진단명</td>
-					<td style="width:15%;">담당의사</td> 
-					-->
+					<td style="width:30%;">환자명</td>
+					<td style="width:50%;">진단명</td>
+					<td style="width:20%;">날짜</td>
 					
 				</tr>
-				<!-- 게시물용 환자 목록 가져오기 -->
-				<%for( UDTO udto : ulist ) {%>
+				<!-- 시트 목록 가져오기 -->
+				<%for( PerDTO pdto : plist ) {%>
 				<tr>
-					<td><input type="radio" name="chk_useq" value="<%=CmmUtil.nvl(udto.getU_seq())%>"></td>
-					<td><%=CmmUtil.nvl(udto.getName()) %></td>
+					<td><%=CmmUtil.nvl(pdto.getName()) %></td>
+					<td><a href="sheetinfo.do?s_seq=<%=pdto.getS_SEQ()%>"><%=CmmUtil.nvl(pdto.getPres()) %></a></td>
+					<td><%=CmmUtil.nvl(pdto.getDate()) %></td>
 				</tr>
 				<%} %>
 			</table>
-			<input class="btn btn-default pull-right" type="submit" value="작성" />
+			
 			
 		</form>
-			
-			
-			<!-- <a class="btn btn-default pull-right" href="WritePage.do">작성</a> -->
 			
 		<div class="text-center">
 		
@@ -132,4 +127,3 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 	</div>
 </body>
 </html>
-

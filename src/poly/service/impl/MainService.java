@@ -66,6 +66,18 @@ public class MainService implements IMainService{
 		// TODO Auto-generated method stub
 		return mainMapper.getallsheetlist();
 	}
+
+	@Override
+	public int getusercount() throws Exception {
+		// TODO Auto-generated method stub
+		return mainMapper.getusercount();
+	}
+
+	@Override
+	public ArrayList<PerDTO> getalluser(PagingDTO paging) throws Exception {
+		// TODO Auto-generated method stub
+		return mainMapper.getalluser(paging);
+	}
 	
 	
 }

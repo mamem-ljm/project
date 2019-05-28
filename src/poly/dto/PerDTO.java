@@ -11,7 +11,7 @@ public class PerDTO {
 	private String dname;
 	private String hash;
 	private String pres;
-	
+
 	
 	public String getPres() {
 		return pres;
