@@ -87,6 +87,26 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 }
 %>
 	
+	<script type="text/javascript">
+		function updateuser(){
+			
+			var chk=document.getElementsByName("chk_useq");
+			var chk_p = 0;
+			for(var i =0; i<chk.length; i++){
+				if(chk[i].checked==true){
+					alert(chk[i].value);
+					location.href="updateuser.do?chk_seq="+chk[i].value;
+					chk_p++;
+					break;
+				}
+				
+			}
+			if(chk_p==0){
+				alert("체크를 해주세요")
+			}
+			
+		}
+	</script>
 	
 	<div class="container" style="margin-top: 10%;width: 50%;">
 		<form method="get" action="WritePage.do">
@@ -97,8 +117,9 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 				
 				<tr>
 					
-					<td style="width:30%;">번호</td>
+					<td style="width:10%;">체크</td>
 					<td style="width:70%;">환자명</td>
+					<td style="width:20%;">생년월일</td>  
 					<!-- 
 					<td style="width:40%;">진단명</td>
 					<td style="width:15%;">담당의사</td> 
@@ -108,17 +129,15 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 				<!-- 게시물용 환자 목록 가져오기 -->
 				<%for( UDTO udto : ulist ) {%>
 				<tr>
-					<td><input type="radio" name="chk_useq" value="<%=CmmUtil.nvl(udto.getU_seq())%>"></td>
+					<td><input type="radio" name="chk_useq" value="<%=CmmUtil.nvl(udto.getU_seq())%>"><%=CmmUtil.nvl(udto.getU_seq())%></td>
 					<td><%=CmmUtil.nvl(udto.getName()) %></td>
+					<td><%=CmmUtil.nvl(udto.getPnumber()) %></td>
 				</tr>
 				<%} %>
 			</table>
 			<input class="btn btn-default pull-right" type="submit" value="작성" />
-			
+			<a class="btn btn-default pull-right" type="button" href="javascript:void(0);" onclick="javascript:updateuser();">수정</a>
 		</form>
-			
-			
-			<!-- <a class="btn btn-default pull-right" href="WritePage.do">작성</a> -->
 			
 		<div class="text-center">
 		

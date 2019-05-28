@@ -96,4 +96,10 @@ public class SNSLoginController {
 		session.invalidate();
 		return "redirect:/home.do";
 	}
+	
+	@RequestMapping(value="updateuser")
+	public String updateuser(HttpServletRequest req) throws Exception{
+		
+		return "updateuser";
+	}
 }
