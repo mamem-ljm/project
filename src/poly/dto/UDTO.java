@@ -8,7 +8,14 @@ public class UDTO {
 	private String hp;
 	private String gender;
 	private String u_seq;
+	private String dnumber;
 	
+	public String getDnumber() {
+		return dnumber;
+	}
+	public void setDnumber(String dnumber) {
+		this.dnumber = dnumber;
+	}
 	public String getId() {
 		return id;
 	}

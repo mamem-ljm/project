@@ -26,4 +26,6 @@ public interface MainMapper {
 
 	ArrayList<PerDTO> getalluser(PagingDTO paging) throws Exception;
 
+	void UpdateUser(UDTO udto) throws Exception;
+
 }

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>추가정보등록</title>
+<title>유저정보 변경</title>
 </head>
 <style>
 .div_border {
@@ -30,20 +30,24 @@ input {
 	overflow: visible;
 }
 </style>
+<body>
+<%
+	String chk_seq = CmmUtil.nvl(request.getParameter("chk_seq"));
+%>
+<%@include file="/assets/header.jsp" %>
+
 <script type=text/javascript>
 	function checkdata() {
 		
 		var form = document.forms.frm;
-		var field = form.name.value;
-
+		/* alert(form.hp2.value); */
+		
 		if (form.name.value == "") {
 			alert("이름을 입력해주세요")
 		} else if (form.addr.value == "") {
 			alert("주소를 입력해주세요")
 		} else if (form.pnumber.value == "") {
 			alert("생년월일을 입력해주세요")
-		} else if (form.hp.value = "") {
-			alert("핸드폰번호를 입력해주세요")
 		} else if (form.gender.value == "") {
 			alert("성별을 체크해주세요")
 		} else {
@@ -52,9 +56,8 @@ input {
 	};
 </script>
 <body>
-	<%@include file="/assets/header.jsp"%>
 	<div class="container" style="margin-top: 13%; width: 50%;">
-		<form action="userinfo.do?id=<%=id%>" method="post" name="frm">
+		<form action="UpdateUser.do?chk_seq=<%=chk_seq%>" method="post" name="frm">
 			<div>
 				<div class="left-box">
 
@@ -68,10 +71,10 @@ input {
 						</b>
 					</div>
 
-					<div class="div_border" style="height: 4.8%;">
+					<!-- <div class="div_border" style="height: 4.8%;">
 						<b> <font size="4em"> 핸드폰번호 </font>
 						</b>
-					</div>
+					</div> -->
 
 					<div class="div_border" style="height: 4.8%;">
 						<b> <font size="4em"> 생년월일 </font>
@@ -82,11 +85,7 @@ input {
 						<b> <font size="4em"> 성별 </font>
 						</b>
 					</div>
-
-					<div class="div_border" style="height: 4.8%;">
-						<b> <font size="4em"> 의사번호 </font>
-						</b>
-					</div>
+					
 					<input type="reset" value="리셋"
 						class="pull-left pull-right btn btn-primary" />
 				</div>
@@ -104,11 +103,9 @@ input {
 
 					</div>
 
-					<div class="div_border" style="height: 4.8%;">
-						<input type="text" placeholder="핸드폰번호" name="hp"
-							class="form-control" style="height: 100%;" />
-
-					</div>
+					<!-- <div class="div_border" style="height: 4.8%;">
+						<input type="text" placeholder="핸드폰번호" name="hp2"	class="form-control" style="height:100%;" />
+					</div> -->
 
 					<div class="div_border" style="height: 4.8%;">
 						<input type="text" placeholder="생년월일" name="pnumber"
@@ -117,22 +114,20 @@ input {
 
 					<div class="div_border" style="height: 4.8%;">
 						<font size="4em"> 
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="radio" name="gender" id="optionsRadios1" value="1" />남
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="radio"	name="gender" id="optionsRadios2" value="0" />여
 						</font>
 					</div>
 
-					<div class="div_border" style="height: 4.8%;">
-						<input type="text" placeholder="예:0000511" name="dnumber"
-							class="form-control" style="height: 100%;" />
-					</div>
-
-					<input type="button" value="등록" class="pull-right btn btn-primary" onclick="javascript:checkdata()"/>
+					<input type="button" value="변경" class="pull-right btn btn-primary" onclick="javascript:checkdata()"/>
 
 				</div>
 			</div>
 		</form>
 	</div>
+</body>
+</html>
 </body>
 </html>

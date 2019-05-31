@@ -26,8 +26,8 @@ public class SNSLoginController {
 		
 		log.info("welcome kakao login");
 		
-		String id = req.getParameter("UserID");
-		String name = req.getParameter("name");
+		String id = CmmUtil.nvl(req.getParameter("UserID"));
+		String name = CmmUtil.nvl(req.getParameter("name"));
 
 		UDTO udto = new UDTO();
 

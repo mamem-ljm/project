@@ -91,7 +91,10 @@ public class MainController {
 		String pnumber = req.getParameter("pnumber");
 		String gender = req.getParameter("gender");
 		
+		log.info("name : " + CmmUtil.nvl(name));
+		
 		UDTO udto = new UDTO();
+		
 		udto.setName(name);
 		udto.setPnumber(pnumber);
 		udto.setAddr(addr);
@@ -169,41 +172,45 @@ public class MainController {
 		return "/main/Userlist";
 	}
 	
-	/*@RequestMapping(value="Userlist")
-	public String Userlist(HttpServletRequest req, Model model)throws Exception{
+	
+	/*유저 업데이트 페이지 반환*/
+	@RequestMapping(value="UpdateuserPage")
+	public String updateuser(HttpServletRequest req) throws Exception{
+		log.info("Welcome UpdateuserPage");
 		
-		log.info("Welcome Userlist");
+		String chk_seq = CmmUtil.nvl(req.getParameter("chk_seq"));
 		
-		ArrayList<PerDTO> allsheet = new ArrayList<PerDTO>();
+		req.setAttribute("chk_seq", chk_seq);
 		
-		int totalCount = mainService.getSheetTotalCount();
-		int pageNum = 1;
-		int pageCount = 5;
+		return "/main/UpdateuserPage";
+	}
+	
+	/*유저 업데이트*/
+	@RequestMapping(value="UpdateUser", method = RequestMethod.POST)
+	public String UpdateUser(HttpServletRequest req) throws Exception{
+		log.info("Welcome UpdateUser");
+		String chk_seq = CmmUtil.nvl(req.getParameter("chk_seq"));
+		String addr = CmmUtil.nvl(req.getParameter("addr"));
+		String name = CmmUtil.nvl(req.getParameter("name"));
+		/*String hp = CmmUtil.nvl(req.getParameter("hp2"));*/
+		String pnumber = CmmUtil.nvl(req.getParameter("pnumber"));
 		
-		pageCount = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageCount"),"5"));
-		pageNum = Integer.parseInt(CmmUtil.nvl(req.getParameter("pageNum"),"1"));
+		/*log.info("hp : " + hp);*/
+		log.info("addr : " + addr);
+		log.info("name : " + name);
+		log.info("pnumber : " + pnumber);
 		
-		log.info("totalCount : "+totalCount);
-		log.info("pageCount : "+pageCount);
-		log.info("pageNum : "+pageNum);
+		UDTO udto = new UDTO();
 		
-		PagingDTO paging = new PagingDTO();
+		udto.setU_seq(chk_seq);
+		udto.setAddr(addr);
+		udto.setName(name);
+		/*udto.setHp(hp);*/
+		udto.setPnumber(pnumber);
 		
-		paging.setTotalCount(totalCount);
-		paging.setPageCount(pageCount);
-		paging.setPageNum(pageNum);
+		/*mainService.UpdateUser(udto);*/
 		
-		allsheet = mainService.getallsheet(paging);
-		
-		model.addAttribute("allsheet",allsheet);
-		
-		model.addAttribute("paging",paging);
-		
-		allsheet = null;
-		
-		log.info("get allsheet end!!");
-		
-		return "/main/Userlist";
-	}*/
+		return "redirect:/home.do";
+	}
 	
 }

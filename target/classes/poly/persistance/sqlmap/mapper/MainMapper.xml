@@ -80,7 +80,7 @@
 </select>
 
 <insert id="SendUser" parameterType="UDTO">
-INSERT INTO
+	INSERT INTO
 		user_list
 	(
 		U_NAME,
@@ -113,5 +113,17 @@ INSERT INTO
 	LIMIT
 		#{pageNum},5
 </select>
+
+<update id="UpdateUser" parameterType="UDTO">
+	UPDATE
+		user_list
+	SET
+		U_NAME = #{name}
+		U_ADDR = #{addr}
+		U_HP = #{hp}
+		U_PNUMBER = #{pnumber}
+	WHERE
+		U_SEQ = #{u_seq}
+</update>
 
 </mapper>

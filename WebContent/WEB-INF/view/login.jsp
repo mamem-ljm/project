@@ -43,7 +43,7 @@
 							console.log(authObj.access_token);
 							
 
-							location.href = 'kakao/login.do?name='+UserNickName+'&UserID='+UserID;
+							location.href = 'kakao/login.do?UserID='+UserID;
 							 
 									
 							Kakao.Auth.setAccessToken(authObj.access_token);

@@ -17,17 +17,15 @@ public class IsChainValid extends Thread {
 
 	@Override
 	public void run() {
-		
+		int i = 1;
 		System.out.println("start");
-		
-		while (!isInterrupted()) {
-			try {
+		try {
+			while (!isInterrupted()) {
+
 				String previousBlock = "";
-
-				int i = 1;
-
+				
 				int size = blockchain.size();
-
+				
 				for (; i < size; i++) {
 
 					// 이전 해시값
@@ -43,21 +41,19 @@ public class IsChainValid extends Thread {
 					Block block = new Block(currentBlock.getContent());
 
 					if (block.mineBlock(previousBlock, currentBlock.getContent(), hash)) {
-						/*System.out.println("equals block!!");*/
+
 					} else {
-						System.out.println(i + " Hashes not equal");
+						System.out.println(i + 1 + " Hashes not equal");
 						blockchain = null;
 						break;
+						
 					}
 
 				}
-			}catch(Exception e) {
-				e.printStackTrace();
 			}
-			
 
+		} catch (Exception e) {
+			System.out.println(i + 1 + " Hashes not equal");
 		}
-
 	}
-
 }

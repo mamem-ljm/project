@@ -1,50 +1,110 @@
 <%@page import="poly.dto.PerDTO"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>진단확인</title>
 </head>
+<style>
+.div_border {
+	border-bottom: 1px solid #D5D5D5;
+}
+
+.left-box {
+	float: left;
+	width: 35%;
+}
+.right-box {
+	float: right;
+	width: 65%;
+}
+.textarea_size{
+	min-height:100%;
+	overflow:visible;
+}
+
+</style>
 <body>
-<%@include file="/assets/header.jsp" %>
-<%
-	PerDTO pdto = (PerDTO) request.getAttribute("pdto");
-%>
-<table class="table table-bordered" style="margin-left:25%; margin-top:15%; width:50%">
+	<%@include file="/assets/header.jsp"%>
+	<%
+		PerDTO pdto = (PerDTO) request.getAttribute("pdto");
+	%>
+	
+	<div class="container" style="width:50%;margin-top:10%">
+		
+		
+			<div class="left-box">
+				<div class="div_border" style="height: 4.8%;">
+					<b> <font size="4em"> 이름 </font>
+					</b>
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+					<b> <font size="4em">생년월일</font>
+					</b>
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+					<b> <font size="4em">진단명</font>
+					</b>
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+					<b> <font size="4em">병명 및 소견</font>
+					</b>
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+					<b> <font size="4em">진료기간</font>
+					</b>
+				</div>
 				
-				<tr>
-					<th style="vertical-align: middle;height: 50px">성함</th>
-					<td style="vertical-align: middle;"><%=CmmUtil.nvl(pdto.getName()) %></td>
-				</tr>
+				<div class="div_border" style="height: 4.8%;">
+					<b> <font size="4em">의사</font>
+					</b>
+				</div>
+								
+			</div>
+
+
+			<div class="right-box">
+				<div class="div_border" style="height: 4.8%;">
+					<font size="4em"><%=CmmUtil.nvl(pdto.getName())%></font>
+					
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+				<font size="4em"><%=CmmUtil.nvl(pdto.getPnumber())%></font>
+					
+				</div>
 				
-				<tr>
-					<th style="vertical-align: middle;height: 50px">생년월일</th>
-					<td style="vertical-align: middle;"><%=CmmUtil.nvl(pdto.getPnumber()) %></td>
-				</tr>
+				<div class="div_border" style="height: 4.8%;">
+				<font size="4em"><%=CmmUtil.nvl(pdto.getPres())%></font>
+					
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+				<font size="4em"><%=CmmUtil.nvl(pdto.getContent())%></font>
+					
+				</div>
+
+				<div class="div_border" style="height: 4.8%;">
+				<font size="4em"><%=CmmUtil.nvl(pdto.getDate())%></font>
+					
+				</div>
 				
-				<tr>
-					<th style="vertical-align: middle;height: 50px">진단명</th>
-					<td style="vertical-align: middle;"><%=CmmUtil.nvl(pdto.getPres()) %></td>
-				</tr>
-				<tr>
-					<th style="vertical-align: middle;height: 50px">병명 및 소견</th>
-					<td style="vertical-align: middle;"><%=CmmUtil.nvl(pdto.getContent()) %></td>
-				</tr>
-				<tr>
-					<th style="vertical-align: middle;height: 50px">진료기간</th>
-					<td><%=CmmUtil.nvl(pdto.getDate()) %></td>
-				</tr>
+				<div class="div_border" style="height: 4.8%;">
+				<font size="4em"><%=CmmUtil.nvl(pdto.getDname())%></font>
+					
+				</div>
 				
-				<tr>
-					<th style="vertical-align: middle;height: 50px">의사</th>
-					<td style="vertical-align: middle;"><%=CmmUtil.nvl(pdto.getDname()) %></td>
-				</tr>
-				<tr>
-					<td colspan="2"><a class="pull-right btn btn-primary btn-lg" style="width:100px"href="home.do">홈으로</a></td>
-				</tr>
-			</table>
+			</div>
+			<a class="pull-right btn btn-primary btn-lg"
+				style="width: 100px" href="home.do">홈으로</a>
+		
+	</div>
 
 </body>
 </html>

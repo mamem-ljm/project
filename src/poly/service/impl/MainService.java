@@ -42,7 +42,7 @@ public class MainService implements IMainService{
 	@Override
 	public void SendUser(UDTO udto) throws Exception {
 		// TODO Auto-generated method stub
-		
+		mainMapper.SendUser(udto);
 	}
 
 	//시트 리스트 토탈 카운트 가져오기
@@ -77,6 +77,12 @@ public class MainService implements IMainService{
 	public ArrayList<PerDTO> getalluser(PagingDTO paging) throws Exception {
 		// TODO Auto-generated method stub
 		return mainMapper.getalluser(paging);
+	}
+
+	@Override
+	public void UpdateUser(UDTO udto) throws Exception {
+		mainMapper.UpdateUser(udto);
+		
 	}
 	
 	

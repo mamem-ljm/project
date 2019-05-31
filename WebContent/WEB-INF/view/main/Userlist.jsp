@@ -34,6 +34,22 @@
 	}
     </script>
 </head>
+<style>
+.table_ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.table_li{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: 0;
+	float: left;
+	text-align:center;
+	border-bottom:1px solid #D5D5D5;
+	line-height: 350%;
+}
+</style>
 <body>
 	<%@include file="/assets/header.jsp" %>
 	
@@ -94,8 +110,7 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 			var chk_p = 0;
 			for(var i =0; i<chk.length; i++){
 				if(chk[i].checked==true){
-					alert(chk[i].value);
-					location.href="updateuser.do?chk_seq="+chk[i].value;
+					location.href="UpdateuserPage.do?chk_seq="+chk[i].value;
 					chk_p++;
 					break;
 				}
@@ -104,44 +119,57 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 			if(chk_p==0){
 				alert("체크를 해주세요")
 			}
-			
 		}
+		
+	</script>
+	<script type="text/javascript">
+	function checkdata() {
+		
+		var form = document.forms.frm;
+		var chk=document.getElementsByName("chk_useq");
+		var chk_p = 0;
+		
+		for(var i = 0; i <chk.length; i++){
+			if(chk[i].checked==true){
+				chk_p++;
+				location.href="WritePage.do?chk_seq="+chk[i].value;
+			}
+		}
+		if(chk_p==0){
+			alert("체크를 해주세요");
+		}
+	};
 	</script>
 	
 	<div class="container" style="margin-top: 10%;width: 50%;">
-		<form method="get" action="WritePage.do">
-			
-			<table class="table">
-
-				<caption>환자 목록</caption>
-				
-				<tr>
-					
-					<td style="width:10%;">체크</td>
-					<td style="width:70%;">환자명</td>
-					<td style="width:20%;">생년월일</td>  
-					<!-- 
-					<td style="width:40%;">진단명</td>
-					<td style="width:15%;">담당의사</td> 
-					-->
-					
-				</tr>
-				<!-- 게시물용 환자 목록 가져오기 -->
-				<%for( UDTO udto : ulist ) {%>
-				<tr>
-					<td><input type="radio" name="chk_useq" value="<%=CmmUtil.nvl(udto.getU_seq())%>"><%=CmmUtil.nvl(udto.getU_seq())%></td>
-					<td><%=CmmUtil.nvl(udto.getName()) %></td>
-					<td><%=CmmUtil.nvl(udto.getPnumber()) %></td>
-				</tr>
-				<%} %>
-			</table>
-			<input class="btn btn-default pull-right" type="submit" value="작성" />
-			<a class="btn btn-default pull-right" type="button" href="javascript:void(0);" onclick="javascript:updateuser();">수정</a>
-		</form>
-			
-		<div class="text-center">
 		
-			<ul class="pagination">
+		<form method="get" action="WritePage.do">
+			<div style="margin-top:10%;">
+				<font size="3em" color="gray">환자목록</font>
+				<ul class="table_ul">
+					<li class="table_li" style="width:10%;"><font size="3em">체크</font></li>
+					<li class="table_li" style="width:70%;"><font size="3em">환자명</font></li>
+					<li class="table_li" style="width:20%;"><font size="3em">생년월일</font></li>
+				</ul>
+			</div>
+			<div>
+			<%for( UDTO udto : ulist ) {%>
+				<ul>
+					<li class="table_li" style="width:10%;height:4%;"><input type="radio" name="chk_useq" value="<%=CmmUtil.nvl(udto.getU_seq())%>"></li>
+					<li class="table_li" style="width:70%;height:4%;"><font size="3em"><%=CmmUtil.nvl(udto.getName()) %></font></li>
+					<li class="table_li" style="width:20%;height:4%;"><font size="3em"><%=CmmUtil.nvl(udto.getPnumber()) %></font></li>
+				</ul>
+			<%} %>
+			</div>
+			
+			<input type="button" value="작성" class="btn btn-default pull-right" onclick="javascript:checkdata();"/>
+			<a class="btn btn-default pull-right" type="button" href="javascript:void(0);" onclick="javascript:updateuser();">수정</a>
+			
+		</form>
+		
+		<div class="text-center">
+			<ul class="pagination" style="margin-top:5%">
+				
 				<%=	fnPaging(
 						paging.getPageCount(), 5, paging.getPageNum(), paging.getTotalCount()
 						)	
