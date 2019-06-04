@@ -51,7 +51,7 @@
 					</b>
 				</div>
 
-				<div class="div_border" style="height: 4.8%;">
+				<div class="div_border" style="height: 42.8%;">
 					<b> <font size="4em">병명 및 소견</font>
 					</b>
 				</div>
@@ -85,8 +85,10 @@
 					
 				</div>
 
-				<div class="div_border" style="height: 4.8%;">
-				<font size="4em"><%=CmmUtil.nvl(pdto.getContent())%></font>
+				<div class="div_border" style="height: 42.8%;">
+				<font size="4em">
+					<textarea cols="58" rows="16" style="border:0"><%=CmmUtil.nvl(pdto.getContent())%></textarea>
+				</font>
 					
 				</div>
 

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>진단서 작성</title>
 <%
-	String chk_useq = request.getParameter("chk_useq");
+	String chk_seq = request.getParameter("chk_seq");
 %>
 <style>
 .div_border {
@@ -43,7 +43,7 @@ input {
 	<%@include file="/assets/header.jsp"%>
 	<div class="container" style="margin-top: 10%;">
 
-		<form action="SendData.do?chk_useq=<%=chk_useq%>" method="post">
+		<form action="SendData.do" method="post">
 
 			<div class="left-box div_bolder">
 				<div class="div_border" style="height: 3.8%;">
@@ -77,11 +77,11 @@ input {
 				</div>
 
 				<div class="div_border" style="height: 3.8%;">
-					<b> <font size="4em"> 의사 </font>
+					<b> <font size="4em"> 의사<%=chk_seq%> </font>
 					</b>
 				</div>
 				
-				<input type="reset" value="reset" class="pull-left btn btn-secondary  btn-lg" />
+				<input type="reset" value="reset" class="pull-left btn btn-secondary btn-lg" />
 				
 			</div>
 
@@ -122,11 +122,11 @@ input {
 					<input type="text" placeholder="의사 성명" class="form-control"
 						name="dname" style="height:100%;" />
 				</div>
+					<input type="hidden" name="chk_seq" value="<%=chk_seq%>" />
 				
 			</div>
 			
-			<input type="submit" value="등록" onclick="sendData()"
-				class="pull-right btn btn-primary  btn-lg" />
+			<input type="submit" value="등록" class="pull-right btn btn-primary btn-lg" />
 				<input type="button" value="취소" class="pull-right btn btn-danger btn-lg"
 				onclick="javascript:location.href='home.do'" />
 			

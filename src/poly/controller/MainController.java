@@ -62,8 +62,12 @@ public class MainController {
 
 	//진단서 작성
 	@RequestMapping(value = "WritePage")
-	public String write() throws Exception {
-
+	public String write(HttpServletRequest req) throws Exception {
+		
+		String u_seq = req.getParameter("chk_seq");
+		
+		req.setAttribute("chk_seq", u_seq);
+		
 		log.info("Welcome WritePage");
 
 		return "/main/WritePage";
@@ -107,7 +111,7 @@ public class MainController {
 	}
 	
 	//진단서 등록
-	@RequestMapping(value = "SendData", method = RequestMethod.POST)
+	@RequestMapping(value = "SendData", method = {RequestMethod.POST,RequestMethod.GET})
 	public String SendData(HttpServletRequest req) throws Exception {
 
 		log.info("welcome senddata");
@@ -118,7 +122,7 @@ public class MainController {
 		String date = req.getParameter("date");
 		String license = req.getParameter("license");
 		String dname = req.getParameter("dname");
-		String u_seq = req.getParameter("chk_useq");
+		String u_seq = req.getParameter("chk_seq");
 		String pnumber = req.getParameter("pnumber");
 		
 		log.info(u_seq);
