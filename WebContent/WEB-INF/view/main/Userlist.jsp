@@ -140,6 +140,23 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 		}
 	};
 	</script>
+	<script type="text/javascript">
+	function DeleteUser(){
+		var form = document.forms.frm;
+		var chk=document.getElementsByName("chk_useq");
+		var chk_p = 0;
+		
+		for(var i = 0; i <chk.length; i++){
+			if(chk[i].checked==true){
+				chk_p++;
+				location.href="DeleteUser.do?chk_seq="+chk[i].value;
+			}
+		}
+		if(chk_p==0){
+			alert("체크를 해주세요");
+		}
+	};
+	</script>
 	
 	<div class="container" style="margin-top: 10%;width: 50%;">
 		
@@ -161,7 +178,7 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 				</ul>
 			<%} %>
 			</div>
-			
+			<a class="btn btn-default pull-left" href="javascript:void(0)" onclick="javascript:DeleteUser()">삭제</a>
 			<input type="button" value="작성" class="btn btn-default pull-right" onclick="javascript:checkdata();"/>
 			<a class="btn btn-default pull-right" type="button" href="javascript:void(0);" onclick="javascript:updateuser();">수정</a>
 			

@@ -84,6 +84,12 @@ public class MainService implements IMainService{
 		mainMapper.UpdateUser(udto);
 		
 	}
+
+	@Override
+	public void DeleteUser(String chk_seq) throws Exception {
+		mainMapper.DeleteUser(chk_seq);
+		
+	}
 	
 	
 }

@@ -18,7 +18,7 @@
 
 <meta name="format-detection" content="telephone=no" />
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
 

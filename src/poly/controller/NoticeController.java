@@ -35,7 +35,7 @@ public class NoticeController {
 		
 		/*noticeService.insertvalue("hellodb");*/
 		
-		return "/index";
+		return "/home";
 	}
 	
 

@@ -24,4 +24,6 @@ public interface IMainService {
 
 	void UpdateUser(UDTO udto) throws Exception;
 
+	void DeleteUser(String chk_seq) throws Exception;
+
 }

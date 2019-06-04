@@ -192,10 +192,10 @@ public class MainController {
 		String chk_seq = CmmUtil.nvl(req.getParameter("chk_seq"));
 		String addr = CmmUtil.nvl(req.getParameter("addr"));
 		String name = CmmUtil.nvl(req.getParameter("name"));
-		/*String hp = CmmUtil.nvl(req.getParameter("hp2"));*/
+		String hp = CmmUtil.nvl(req.getParameter("hp2"));
 		String pnumber = CmmUtil.nvl(req.getParameter("pnumber"));
 		
-		/*log.info("hp : " + hp);*/
+		log.info("hp : " + hp);
 		log.info("addr : " + addr);
 		log.info("name : " + name);
 		log.info("pnumber : " + pnumber);
@@ -205,10 +205,21 @@ public class MainController {
 		udto.setU_seq(chk_seq);
 		udto.setAddr(addr);
 		udto.setName(name);
-		/*udto.setHp(hp);*/
+		udto.setHp(hp);
 		udto.setPnumber(pnumber);
 		
-		/*mainService.UpdateUser(udto);*/
+		mainService.UpdateUser(udto);
+		
+		return "redirect:/home.do";
+	}
+	
+	@RequestMapping(value="DeleteUser")
+	public String DeleteUser(HttpServletRequest req)throws Exception{
+		log.info("Welcome DeleteUser");
+		
+		String chk_seq = CmmUtil.nvl(req.getParameter("chk_seq"));
+		
+		mainService.DeleteUser(chk_seq);
 		
 		return "redirect:/home.do";
 	}

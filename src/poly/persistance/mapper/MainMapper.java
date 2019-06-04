@@ -28,4 +28,6 @@ public interface MainMapper {
 
 	void UpdateUser(UDTO udto) throws Exception;
 
+	void DeleteUser(String chk_seq) throws Exception;
+
 }

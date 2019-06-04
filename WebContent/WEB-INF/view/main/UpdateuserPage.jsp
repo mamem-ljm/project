@@ -71,10 +71,10 @@ input {
 						</b>
 					</div>
 
-					<!-- <div class="div_border" style="height: 4.8%;">
+					<div class="div_border" style="height: 4.8%;">
 						<b> <font size="4em"> 핸드폰번호 </font>
 						</b>
-					</div> -->
+					</div>
 
 					<div class="div_border" style="height: 4.8%;">
 						<b> <font size="4em"> 생년월일 </font>
@@ -103,9 +103,9 @@ input {
 
 					</div>
 
-					<!-- <div class="div_border" style="height: 4.8%;">
+					<div class="div_border" style="height: 4.8%;">
 						<input type="text" placeholder="핸드폰번호" name="hp2"	class="form-control" style="height:100%;" />
-					</div> -->
+					</div>
 
 					<div class="div_border" style="height: 4.8%;">
 						<input type="text" placeholder="생년월일" name="pnumber"
