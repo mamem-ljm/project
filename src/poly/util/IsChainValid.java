@@ -14,19 +14,24 @@ public class IsChainValid extends Thread {
 	public void setBlockchain(ArrayList<PerDTO> blockchain) {
 		this.blockchain = blockchain;
 	}
+	
+	private boolean stop=false;
+	
+	void TestThread(boolean stop){
+		this.stop = stop;
+	}
 
 	@Override
 	public void run() {
-		int i = 1;
+		
 		System.out.println("start");
 		try {
-			while (!isInterrupted()) {
 
-				String previousBlock = "";
-				
-				int size = blockchain.size();
-				
-				for (; i < size; i++) {
+			String previousBlock = "";
+			int size = blockchain.size();
+			
+			while (!stop) {
+				for (int i = 1; i < size; i++) {
 
 					// 이전 해시값
 					String hash = blockchain.get(i).getHash();
@@ -41,19 +46,21 @@ public class IsChainValid extends Thread {
 					Block block = new Block(currentBlock.getContent());
 
 					if (block.mineBlock(previousBlock, currentBlock.getContent(), hash)) {
-
+						/*System.out.println(i + 1 + " Hashes equal");
+						System.out.println("bool : " + bool);*/
 					} else {
 						System.out.println(i + 1 + " Hashes not equal");
-						blockchain = null;
+						System.out.println("thread end");
+						TestThread(true);
 						break;
-						
 					}
-
 				}
+				
 			}
 
 		} catch (Exception e) {
-			System.out.println(i + 1 + " Hashes not equal");
+			System.out.println("종료");
+			e.printStackTrace();
 		}
 	}
 }

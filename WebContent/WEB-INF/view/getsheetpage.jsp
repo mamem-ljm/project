@@ -122,7 +122,7 @@
 					for (PerDTO pdto : plist) {
 				%>
 				<ul>
-					<li class="table_li" style="width: 10%; height: 4%;"><%=CmmUtil.nvl(pdto.getName())%></li>
+					<li class="table_li" style="width: 10%; height: 4%;"><font size="3em"><%=CmmUtil.nvl(pdto.getName())%></font></li>
 					<li class="table_li" style="width: 70%; height: 4%;">
 						<font size="3em">
 							<a	href="sheetinfo.do?s_seq=<%=pdto.getS_SEQ()%>">
