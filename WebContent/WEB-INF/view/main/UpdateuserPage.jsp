@@ -38,17 +38,17 @@ input {
 
 <script type=text/javascript>
 	function checkdata() {
-		
+		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,]/; 
 		var form = document.forms.frm;
 		/* alert(form.hp2.value); */
 		
-		if (form.name.value == "") {
+		if (form.name.value == "" || pattern_spc.test(form.name.value)) {
 			alert("이름을 입력해주세요")
-		} else if (form.addr.value == "") {
+		} else if (form.addr.value == "" || pattern_spc.test(form.addr.value)) {
 			alert("주소를 입력해주세요")
-		} else if (form.pnumber.value == "") {
+		} else if (form.pnumber.value == "" || pattern_spc.test(form.pnumber.value)) {
 			alert("생년월일을 입력해주세요")
-		} else if (form.gender.value == "") {
+		} else if (form.gender.value == "" || pattern_spc.test(form.gender.value)) {
 			alert("성별을 체크해주세요")
 		} else {
 			form.submit()
