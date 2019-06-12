@@ -31,6 +31,7 @@ input {
 }
 </style>
 <body>
+
 <%
 	String chk_seq = CmmUtil.nvl(request.getParameter("chk_seq"));
 %>
@@ -38,7 +39,7 @@ input {
 
 <script type=text/javascript>
 	function checkdata() {
-		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,]/; 
+		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,/]/; 
 		var form = document.forms.frm;
 		/* alert(form.hp2.value); */
 		
@@ -55,8 +56,12 @@ input {
 		}
 	};
 </script>
+
 <body>
-	<div class="container" style="margin-top: 13%; width: 50%;">
+<div class="container" style="margin-top:7%;width:93%;height:35%;">
+		<img src="/assets/img/02.jpg" style="width:100%;height:100%;"/>
+</div>
+	<div class="container" style="margin-top: 2%; width: 50%;">
 		<form action="UpdateUser.do?chk_seq=<%=chk_seq%>" method="post" name="frm">
 			<div>
 				<div class="left-box">

@@ -105,8 +105,10 @@
 		return pagingStr;
 	}%>
 
-
-	<div class="container" style="margin-top: 10%; width: 50%;">
+	<div class="container" style="margin-top:7%;width:93%;height:35%;">
+		<img src="/assets/img/02.jpg" style="width:100%;height:100%;"/>
+	</div>
+	<div class="container" style="margin-top:-3%; width: 50%;">
 		<form method="get" action="WritePage.do">
 			<div style="margin-top: 10%;">
 				<font size="3em" color="gray">진단목록</font>

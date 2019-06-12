@@ -39,7 +39,7 @@ input {
 </script>
 <script type=text/javascript>
 	function checkdata() {
-		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,]/; 
+		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,/]/; 
 		var form = document.forms.frm;
 		var field = form.name.value;
 
@@ -67,7 +67,10 @@ input {
 
 <body>
 	<%@include file="/assets/header.jsp"%>
-	<div class="container" style="margin-top: 10%;">
+	<div class="container" style="margin-top:7%;width:93%;height:35%;">
+		<img src="/assets/img/02.jpg" style="width:100%;height:100%;"/>
+	</div>
+	<div class="container" style="margin-top: 1%;">
 
 		<form action="SendData.do" method="post" name="frm">
 

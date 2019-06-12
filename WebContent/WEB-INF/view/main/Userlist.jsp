@@ -51,7 +51,10 @@
 	line-height: 350%;
 }
 </style>
-<body>
+<body style="width:100%;">
+
+	
+
 	<%@include file="/assets/header.jsp" %>
 	
 	<!-- 페이지 -->
@@ -159,7 +162,11 @@ private String fnPaging(int pageCount, int blockCount, int pageNum, int totalCou
 	};
 	</script>
 	
-	<div class="container" style="margin-top: 10%;width: 50%;">
+	<div class="container" style="margin-top:7%;width:93%;height:35%;">
+		<img src="/assets/img/01.jpg" style="width:100%;height:100%;"/>
+	</div>
+	
+	<div class="container" style="width:50%;margin-top:-3%">
 		
 		<form method="get" action="WritePage.do">
 			<div style="margin-top:10%;">

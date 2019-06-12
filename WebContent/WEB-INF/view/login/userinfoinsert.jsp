@@ -32,7 +32,7 @@ input {
 </style>
 <script type=text/javascript>
 	function checkdata() {
-		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,]/; 
+		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,/]/; 
 		var form = document.forms.frm;
 		var field = form.name.value;
 

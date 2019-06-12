@@ -12,7 +12,7 @@
 %>
 <script type=text/javascript>
 	function checkdata() {
-		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,]/; 
+		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,/]/; 
 		var form = document.forms.frm;
 		var field = form.name.value;
 
@@ -53,8 +53,12 @@
 <body>
 
 	<%@include file="/assets/header.jsp"%>
+	
+	<div class="container" style="margin-top:7%;width:93%;height:35%;">
+		<img src="/assets/img/02.jpg" style="width:100%;height:100%;"/>
+	</div>
 
-	<div class="container" style="width:50%;margin-top:15%;">
+	<div class="container" style="width:50%;margin-top:2%;">
 		<form action="SendUser.do" name=frm method="post" id="frm">
 		
 			<div class="left-box">
