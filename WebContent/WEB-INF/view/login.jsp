@@ -8,7 +8,7 @@
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 
-<body>
+
 
 	<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
 		src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"

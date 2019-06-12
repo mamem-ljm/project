@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet"
@@ -182,19 +182,20 @@
 											id="comp-jjs6oa2jinlineContent" class="mc1inlineContent">
 											<style id="comp-jjs6oa2j-mesh-styles">
 #comp-jjs6oa2jinlineContent {
-	height: auto;
+	height: 100%;
 	width: 100%;
 	position: relative;
 }
 
 #comp-jjs6oa2jinlineContent-gridWrapper {
 	pointer-events: none;
+	height: 100%;
 }
 
 #comp-jjs6oa2jinlineContent-gridContainer {
 	position: static;
 	display: grid;
-	height: auto;
+	height: 100%;
 	width: 100%;
 	min-height: auto;
 	grid-template-rows: 1fr;
@@ -204,7 +205,7 @@
 #comp-jezowoa0 {
 	position: relative;
 	margin: 18px 0px 25px calc(( 100% - 363px)* 0);
-	left: 56px;
+	left: 10%;
 	grid-area: 1/1/2/2;
 	justify-self: start;
 	align-self: start;
@@ -212,8 +213,8 @@
 
 #comp-ja27hj5n {
 	position: relative;
-	margin: 25px 0px 32px calc(( 100% - 363px)* 0);
-	left: 131px;
+	margin-top: 20%;
+	left: 150%;
 	grid-area: 1/1/2/2;
 	justify-self: start;
 	align-self: start;
@@ -253,39 +254,37 @@
 	fill: rgba(1, 197, 162, 1);
 }
 </style>
-														<a href="https://leejmin60.wixsite.com/projectsite"
-															target="_self" style="cursor: pointer"
-															id="comp-jezowoa0link" class="style-jezowobvlink"><div
-																style="opacity: 1"
-																class="style-jezowobv_comp-jezowoa0 style-jezowobv_non-scaling-stroke style-jezowobvsvg"
-																id="comp-jezowoa0svg">
-																<svg preserveAspectRatio="xMidYMid meet"
-																	data-bbox="58 59 84 82" viewBox="58 59 84 82"
-																	height="200" width="200"
-																	xmlns="http://www.w3.org/2000/svg" data-type="color"
-																	role="img" style="">
+														<div style="opacity: 1"
+															class="style-jezowobv_comp-jezowoa0 style-jezowobv_non-scaling-stroke style-jezowobvsvg"
+															id="comp-jezowoa0svg">
+															<svg preserveAspectRatio="xMidYMid meet"
+																data-bbox="58 59 84 82" viewBox="58 59 84 82"
+																height="200" width="200"
+																xmlns="http://www.w3.org/2000/svg" data-type="color"
+																role="img" style="">
     <g>
         <path fill="#FFFFFF"
-																		d="M142 88.227v-4.388h-26.333V59H83.053v24.839H58v32.271h25.053V141h32.614v-24.89h14.36v-4.389h-18.796v24.827H87.488l.102-24.827H62.435V88.227h25.053V63.389h23.743v24.89L142 88.227z"
-																		data-color="1"></path>
+																	d="M142 88.227v-4.388h-26.333V59H83.053v24.839H58v32.271h25.053V141h32.614v-24.89h14.36v-4.389h-18.796v24.827H87.488l.102-24.827H62.435V88.227h25.053V63.389h23.743v24.89L142 88.227z"
+																	data-color="1"></path>
         <path fill="#E96C54"
-																		d="M106.456 97.806h-4.238v-4.194h-4.436v4.194h-4.238v4.388h4.238v4.194h4.436v-4.194h4.238v-4.388z"
-																		data-color="2"></path>
+																	d="M106.456 97.806h-4.238v-4.194h-4.436v4.194h-4.238v4.388h4.238v4.194h4.436v-4.194h4.238v-4.388z"
+																	data-color="2"></path>
     </g>
 </svg>
-															</div></a>
+															
+
+														</div>
+														<div data-packed="true"
+																style="width: 232px; pointer-events: none;"
+																class="txtNew" id="comp-ja27hj5n">
+																<p class="font_3">
+																	<span class="color_11"><font
+																		style="vertical-align: inherit;"><font
+																			style="vertical-align: inherit;">의료 클리닉</font></font></span>
+																</p>
+															</div>
 													</div>
-													<div data-packed="true"
-														style="width: 232px; pointer-events: none;" class="txtNew"
-														id="comp-ja27hj5n">
-														<p class="font_3">
-															<span class="color_11"><a
-																href="https://leejmin60.wixsite.com/projectsite"
-																target="_self"><font
-																	style="vertical-align: inherit;"><font
-																		style="vertical-align: inherit;">의료 클리닉</font></font></a></span>
-														</p>
-													</div>
+
 												</div>
 											</div>
 										</div>
@@ -383,6 +382,7 @@
 														<ul style="text-align: right" aria-label="Site navigation"
 															role="navigation" id="comp-ja27wet6itemsContainer"
 															class="style-jqccasb4itemsContainer">
+															
 															<li data-direction="ltr" data-listposition="center"
 																data-data-id="bmi23nr"
 																class="style-jqccasb4repeaterButton"
@@ -392,7 +392,7 @@
 																aria-hidden="false"
 																style="width: 15%; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																role="button" tabindex="0" aria-haspopup="false"
-																data-listposition="center" href="" target="_self"
+																data-listposition="center" href="home.do" target="_self"
 																id="comp-ja27wet60linkElement"
 																class="style-jqccasb4repeaterButtonlinkElement"><div
 																		class="style-jqccasb4repeaterButton_gapper">
@@ -497,8 +497,7 @@
 																style="width: 61px; height: 28px; position: relative; box-sizing: border-box; overflow: visible;"><a
 																role="button" tabindex="0" aria-haspopup="false"
 																data-listposition="right" href="logout.do"
-																target="_self"
-																id="comp-ja27wet64linkElement"
+																target="_self" id="comp-ja27wet64linkElement"
 																class="style-jqccasb4repeaterButtonlinkElement"><div
 																		class="style-jqccasb4repeaterButton_gapper">
 																		<div style="text-align: right" id="comp-ja27wet64bg"

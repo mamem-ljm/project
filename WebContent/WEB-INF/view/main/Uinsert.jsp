@@ -2,6 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -53,7 +54,7 @@
 
 	<%@include file="/assets/header.jsp"%>
 
-	<div class="container" style="width:50%;margin-top:10%">
+	<div class="container" style="width:50%;margin-top:15%;">
 		<form action="SendUser.do" name=frm method="post" id="frm">
 		
 			<div class="left-box">

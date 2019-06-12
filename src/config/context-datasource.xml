@@ -27,18 +27,17 @@
 	
 	
 	<!-- mySQL Connection Pool -->   
-   <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
         lazy-init="false">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        localhost
+        
         <property name="url" value="jdbc:mysql://localhost:3306/mydb?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul" />
-        AWS LINUX Server
-        <property name="url" value="jdbc:mysql://13.209.164.26:3306/superdev?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul" />
+        
         <property name="username" value="project" />
         <property name="password" value="1234" />
-    </bean> -->
+    </bean>
     
-   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+  <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
         lazy-init="false">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
        	
@@ -46,7 +45,7 @@
         
         <property name="username" value="project" />
         <property name="password" value="Data01Analysis#" />
-   </bean>
+   </bean> -->
 	
 
 

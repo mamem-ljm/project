@@ -988,8 +988,8 @@
 
 #comp-ja28p1gn {
 	position: relative;
-	margin: 0px 0px 0px 20.5%;
-	left: 407px;
+	margin: 0px 0px 0px 0px;
+	left: 42%;
 	grid-area: 4/1/5/2;
 	justify-self: start;
 	align-self: start;
@@ -1032,15 +1032,7 @@
 																				style="vertical-align: inherit;">MEDICAL</font></font></span>
 																	</h4>
 																</div>
-																<!-- <div data-packed="true" class="txtNew"
-																	id="comp-jncqqqog"
-																	style="width: 505px; pointer-events: none;">
-																	<h3 class="font_3" style="text-align: center;">
-																		<span style="letter-spacing: 0.15em;"><font
-																			style="vertical-align: inherit;"><font
-																				style="vertical-align: inherit;">성인용</font></font></span>
-																	</h3>
-																</div> -->
+																
 																<div data-packed="false" data-min-height="22"
 																	class="txtNew" id="comp-ji1sxvoq"
 																	style="width: 980px; min-height: 22px; pointer-events: none;">
@@ -1060,6 +1052,7 @@
 																					~ 오후 4시 30 분</font></font></span>
 																	</p>
 																</div>
+																
 
 																<div id="comp-ja28p1gn" data-align="center"
 																	data-disabled="false" data-margin="0"
@@ -1067,20 +1060,16 @@
 																	data-height="41" class="style-jkjozsak guideBox"
 																	data-state="desktop shouldUseFlex center"
 																	style="height: 41px; min-height: 21px; width: 165px;">
-																	<!-- <a onclick="show()" href="javascript:void(0)"
-																		target="_self" role="button" id="comp-ja28p1gnlink"
-																		class="g-transparent-a style-jkjozsaklink"><span
-																		id="comp-ja28p1gnlabel"
-																		class="style-jkjozsaklabel textbtn"
-																		style="color: gray;"><font
-																			style="vertical-align: inherit;"><font
-																				style="vertical-align: inherit;">로그인</font></font></span></a> -->
-																	<%if(id == ""){%>
-																		<%@include file="login.jsp" %>
-																	<%} %>
-
+																	
+																				<div class="contaitner">
+																					<%if(id == ""){%>
+																						<%@include file="login.jsp" %>
+																					<%} %>
+																				</div>
 																</div>
+																
 															</div>
+															
 														</div>
 													</div>
 												</div>
@@ -3327,33 +3316,5 @@
 	pointer-events: initial;
 }
 </style>
-		<!-- <div data-packed="true"
-			style="width: 105px; pointer-events: none; z-index: 50;"
-			class="txtNew" id="comp-jibckh7o">
-			<p class="font_9" style="text-align: right;">
-				<span style="font-weight: bold;"><span class="color_18"><span
-						style="text-decoration: underline;"><a
-							href=""
-							target="_self"><font style="vertical-align: inherit;"><font
-									style="vertical-align: inherit;color:gray;">로그인</font></font></a></span></span></span>
-			</p>
-		</div> -->
-		<div data-packed="false"
-			style="width: 530px; min-height: 30px; pointer-events: none; z-index: 50;"
-			data-min-height="30" class="txtNew" id="comp-jezjuctv">
-			<p class="font_9">
-				<font style="vertical-align: inherit;"><font
-					style="vertical-align: inherit;">500 Terry Francois Street,
-						SF, CA 94158&nbsp;</font></font>
-			</p>
-		</div>
-		<div data-packed="true"
-			style="width: 145px; pointer-events: none; z-index: 50;"
-			class="txtNew" id="comp-jniz9a5i">
-			<p class="font_9">
-				<font style="vertical-align: inherit;"><font
-					style="vertical-align: inherit;">전화 : 123-456-7890</font></font>
-			</p>
-		</div>
 	</div>
 </div>
