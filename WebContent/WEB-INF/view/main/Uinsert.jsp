@@ -22,7 +22,7 @@
 			alert("주소를 확인해주세요")
 		} else if (form.pnumber.value == ""|| pattern_spc.test(form.pnumber.value)) {
 			alert("생년월일을 확인해주세요")
-		} else if (form.hp.value = ""|| pattern_spc.test(form.hp.value)) {
+		} else if (form.hp.value == ""|| pattern_spc.test(form.hp.value)) {
 			alert("핸드폰번호를 확인해주세요")
 		} else if (form.gender.value == ""|| pattern_spc.test(form.gender.value)) {
 			alert("성별을 확인해주세요")

@@ -37,7 +37,7 @@
         <property name="password" value="1234" />
     </bean> -->
     
-  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+ 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
         lazy-init="false">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
        	
@@ -45,7 +45,7 @@
         
         <property name="username" value="project" />
         <property name="password" value="Data01Analysis#" />
-   </bean>
+   	</bean>
 	
 
 

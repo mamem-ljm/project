@@ -32,20 +32,22 @@ input {
 </style>
 <script type=text/javascript>
 	function checkdata() {
-		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,/]/; 
+		var pattern_spc = /[~!@#$%^&*()_+|<>?:{}.,]/; 
 		var form = document.forms.frm;
-		var field = form.name.value;
+		
 
 		if (form.name.value == "" || pattern_spc.test(form.name.value)) {
-			alert("이름을 확인해주세요")
+			alert("이름을 확인해주세요");
 		} else if (form.addr.value == "" || pattern_spc.test(form.addr.value)) {
-			alert("주소를 확인해주세요")
+			alert("주소를 확인해주세요");
+		} else if (form.hp.value == "" || pattern_spc.test(form.hp.value)) {
+			alert("핸드폰번호를 확인해주세요");
 		} else if (form.pnumber.value == "" || pattern_spc.test(form.pnumber.value)) {
-			alert("생년월일을 확인해주세요")
-		} else if (form.hp.value = "" || pattern_spc.test(form.hp.value)) {
-			alert("핸드폰번호를 확인해주세요")
-		} else if (form.gender.value == "" || pattern_spc.test(form.gender.value)) {
-			alert("성별을 확인해주세요")
+			alert("생년월일을 확인해주세요");
+		}  else if (form.gender.value == "" || pattern_spc.test(form.gender.value)) {
+			alert("성별을 확인해주세요");
+		} else if (pattern_spc.test(form.dnumber.value)) {
+			alert("성별을 확인해주세요");
 		} else {
 			form.submit()
 		}
@@ -107,7 +109,6 @@ input {
 					<div class="div_border" style="height: 4.8%;">
 						<input type="text" placeholder="핸드폰번호" name="hp"
 							class="form-control" style="height: 100%;" />
-
 					</div>
 
 					<div class="div_border" style="height: 4.8%;">
