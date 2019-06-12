@@ -40,7 +40,7 @@
 
 </head>
 
-<body>
+<body style="width:100%;">
 
 	<div style="background-color: white; height: 50px; position: fixed">
 

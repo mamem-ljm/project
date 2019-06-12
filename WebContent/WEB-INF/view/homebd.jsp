@@ -1059,7 +1059,7 @@
 																	data-should-use-flex="true" data-width="165"
 																	data-height="41" class="style-jkjozsak guideBox"
 																	data-state="desktop shouldUseFlex center"
-																	style="height: 41px; min-height: 21px; width: 165px;">
+																	style="height: 41px; min-height: 21px; width: 100%">
 																	
 																				<div class="contaitner">
 																					<%if(id == ""){%>

@@ -12,7 +12,7 @@
 
 	<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
 		src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"
-		width="300" />
+		width="16%" />
 	</a>
 
 	<!-- 로그인 -->
